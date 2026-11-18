@@ -1,0 +1,1113 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Євротерм-Тернопіль — Монтаж інженерних рішень та гуртовий продаж обладнання</title>
+<meta name="description" content="Євротерм-Тернопіль: працюємо з 1999 року. Монтаж інженерних рішень та гуртовий продаж обладнання для опалення, водопостачання, водоочистки та сервіс. Безкоштовна доставка по області. Вул. Об'їзна, 19, Великі Гаї. Тел: 098 478 26 37">
+<meta name="theme-color" content="#85C240">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Євротерм-Тернопіль">
+<meta property="og:title" content="Євротерм-Тернопіль — Монтаж інженерних рішень та гуртовий продаж обладнання">
+<meta property="og:description" content="Понад 25 років досвіду. Монтаж інженерних рішень, гуртовий продаж обладнання, сервіс та безкоштовна доставка по Тернопільській області. 098 478 26 37">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 100'%3E%3Cpath d='M92 20 A40 40 0 1 0 92 80' fill='none' stroke='%23232321' stroke-width='14' stroke-linecap='butt'/%3E%3Cpath d='M92 20 A40 40 0 0 1 92 80' fill='none' stroke='%2385C240' stroke-width='14' stroke-linecap='butt'/%3E%3Cline x1='10' y1='50' x2='62' y2='50' stroke='%232321' stroke-width='14' stroke-linecap='round'/%3E%3Ccircle cx='64' cy='50' r='12' fill='%232321'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+  /* ==================== ЗБІЛЬШЕНИЙ БЕЙДЖ ТА ЛОГОТИП У HERO ==================== */
+  .hero-since {
+    font-size: clamp(1rem, 1.45vw, 1.18rem);
+    padding: 9px 20px;
+    letter-spacing: 0.04em;
+    margin-bottom: 22px;
+  }
+  .hero-emblem-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px auto 24px;
+  }
+  .hero-emblem-svg {
+    width: clamp(150px, 18vw, 210px);
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 12px 26px rgba(35, 35, 33, 0.14));
+    transition: transform 0.25s ease;
+  }
+  .hero-emblem-svg:hover {
+    transform: scale(1.04);
+  }
+
+  /* ==================== ПРО КОМПАНІЮ: 3 КОЛОНКИ ЦИФР ==================== */
+  .about .nums {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ==================== 2 ОСНОВНІ НАПРЯМКИ ТА ПЕРЕВАГИ ==================== */
+  .dir-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 54px;
+  }
+  .dir-card {
+    position: relative;
+    border-radius: 24px;
+    padding: clamp(24px, 3.2vw, 36px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 22px;
+    background: #ffffff;
+    color: #181a15;
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease;
+  }
+  .dir-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .dir-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .dir-ico {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: var(--accent-soft);
+    color: #181a15;
+    border: 1px solid var(--line);
+  }
+  .dir-pill {
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: #181a15;
+    border: 1px solid var(--line);
+  }
+  .dir-card h3 {
+    font-size: clamp(1.32rem, 2.2vw, 1.62rem);
+    margin: 0 0 12px;
+    line-height: 1.22;
+    color: #181a15;
+  }
+  .dir-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 18px;
+    color: var(--muted);
+  }
+  .dir-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .dir-tags span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 5px 11px;
+    border-radius: 9px;
+    background: #f8f9f6;
+    color: #181a15;
+    border: 1px solid var(--line);
+  }
+  .dir-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+  }
+
+  /* Сітка переваг (5 карток: 3 зверху, 2 по центру знизу на десктопі) */
+  .adv-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px;
+  }
+  .adv-card {
+    grid-column: span 2;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 24px 22px;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .adv-card:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+  .adv-card:nth-child(5) {
+    grid-column: 4 / span 2;
+  }
+  .adv-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .adv-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .adv-ico {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    color: #181a15;
+    border: 1px solid var(--line);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .adv-num {
+    font-size: 0.82rem;
+    font-weight: 900;
+    color: #181a15;
+    letter-spacing: 0.04em;
+  }
+  .adv-card h3 {
+    font-size: 1.08rem;
+    color: #181a15;
+    margin: 0 0 8px;
+  }
+  .adv-card p {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  @media (max-width: 960px) {
+    .dir-grid {
+      grid-template-columns: 1fr;
+    }
+    .adv-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .adv-card,
+    .adv-card:nth-child(4),
+    .adv-card:nth-child(5) {
+      grid-column: span 1;
+    }
+  }
+  @media (max-width: 600px) {
+    .adv-grid,
+    .about .nums {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ==================== КАРТКИ СПЕЦІАЛІСТІВ (ТЕЛЕФОН + E-MAIL) ==================== */
+  .spec-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 12px 14px;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .spec-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .spec-main {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+  .spec-role {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--muted);
+  }
+  .spec-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 14px;
+  }
+  .spec-phone {
+    font-size: 1.02rem;
+    font-weight: 800;
+    color: #181a15;
+    text-decoration: none;
+  }
+  .spec-phone:hover {
+    color: var(--accent-dark);
+  }
+  .spec-mail {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #181a15;
+    background: #f2f8ea;
+    border: 1px solid var(--line);
+    padding: 3px 9px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.18s ease, color 0.18s ease;
+  }
+  .spec-mail:hover {
+    background: var(--accent);
+    color: #181a15;
+  }
+  .spec-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-shrink: 0;
+  }
+  .spec-ico-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: #181a15;
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    text-decoration: none;
+    transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .spec-ico-btn:hover {
+    background: #94d14f;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .foot-mail {
+    display: inline-block;
+    font-size: 0.82rem;
+    color: var(--accent) !important;
+    margin-top: 2px;
+  }
+  .foot-mail:hover {
+    text-decoration: underline;
+  }
+
+  /* ==================== ЧІПСИ У ФОРМІ ЗАЯВКИ (В СТИЛІ CALC-PILL) ==================== */
+  .chips .chip {
+    border: 1px solid var(--line);
+    background: #f8f9f6;
+    color: #181a15;
+    font-weight: 700;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+  }
+  .chips .chip:hover {
+    transform: translateY(-2px);
+    background: #eef8e2;
+  }
+  .chips .chip[aria-pressed="true"] {
+    background: var(--accent);
+    color: #181a15;
+    border: 1px solid var(--line);
+    font-weight: 800;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+
+  /* ==================== ЖИВИЙ СТАТУС РОБОТИ ТА МАРШРУТ ==================== */
+  .schedule-card {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 16px 18px;
+    margin: 18px 0;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .live-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.84rem;
+    font-weight: 800;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+  .live-status-pill.is-open {
+    background: #eaf7dc;
+    color: #2c5e08;
+    border: 1px solid var(--line);
+  }
+  .live-status-pill.is-closed {
+    background: #fff3e6;
+    color: #8a4300;
+    border: 1px solid var(--line);
+  }
+  .status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .is-open .status-dot {
+    background: #58a618;
+    box-shadow: 0 0 0 4px rgba(88, 166, 24, 0.22);
+  }
+  .is-closed .status-dot {
+    background: #e07a16;
+  }
+  .sched-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .sched-day {
+    background: #f7f8f5;
+    border-radius: 10px;
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+  }
+  .sched-day small {
+    display: block;
+    font-size: 0.74rem;
+    color: var(--muted);
+  }
+  .sched-day b {
+    display: block;
+    font-size: 0.88rem;
+    color: #181a15;
+    margin-top: 2px;
+  }
+  .sched-day.day-off b {
+    color: #b54708;
+  }
+  .map-wrap {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    margin-top: 12px;
+    background: #eef1ea;
+  }
+  .map-wrap iframe {
+    display: block;
+    width: 100%;
+    height: 210px;
+    border: 0;
+  }
+  .route-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .route-btn {
+    flex: 1 1 150px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.84rem;
+    font-weight: 800;
+    text-decoration: none;
+    border: 1px solid var(--line);
+    background: #f8f9f6;
+    color: #181a15;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    transition: all 0.18s ease;
+  }
+  .route-btn:hover {
+    background: var(--accent);
+    color: #181a15;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  @media (max-width: 560px) {
+    .sched-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "name": "Євротерм-Тернопіль",
+  "foundingDate": "1999",
+  "description": "Торгово-монтажна інженерна організація: монтаж інженерних рішень та гуртовий продаж обладнання для опалення, водопостачання, сантехніки, водоочистки та сервіс у Тернополі та області.",
+  "email": "info@euro-term.com.ua",
+  "telephone": ["+380984782637", "+380984782819", "+380673504400", "+380674713402", "+380969689103"],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/euroterm.ternopil",
+    "https://www.tiktok.com/@euroterm",
+    "https://www.facebook.com/EurotermTernopil"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "вулиця Об'їзна, 19",
+    "addressLocality": "Великі Гаї",
+    "addressRegion": "Тернопільська область",
+    "postalCode": "47722",
+    "addressCountry": "UA"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<!-- ==================== ШАПКА САЙТУ ==================== -->
+<header class="head">
+  <div class="wrap">
+    <a class="brand-logo" href="index.html" aria-label="Євротерм-Тернопіль, на головну">
+      <svg viewBox="0 0 120 100" aria-hidden="true">
+        <path d="M90 19 A39 39 0 1 0 90 81" fill="none" stroke="#232321" stroke-width="13.5" stroke-linecap="butt"/>
+        <path d="M90 19 A39 39 0 0 1 90 81" fill="none" stroke="#85C240" stroke-width="13.5" stroke-linecap="butt"/>
+        <line x1="9" y1="50" x2="62" y2="50" stroke="#232321" stroke-width="13.5" stroke-linecap="round"/>
+        <circle cx="64" cy="50" r="11.5" fill="#232321"/>
+      </svg>
+      <div class="brand-name">
+        <strong>ЄВРОТЕРМ</strong>
+        <span>Тернопіль</span>
+      </div>
+    </a>
+
+    <nav class="nav" aria-label="Основне меню">
+      <a href="index.html" class="active">Головна сторінка</a>
+      <a href="katalog.html">Каталог Сервіс</a>
+      <a href="montazh.html">Монтаж опалення</a>
+      <a href="vodoochystka.html">Монтаж Водоочистки</a>
+      <a href="korysna-informatsiya.html">Корисна інформація</a>
+    </nav>
+
+    <div class="head-r">
+      <div class="head-socs">
+        <a class="sb" href="https://www.instagram.com/euroterm.ternopil" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a class="sb" href="https://www.tiktok.com/@euroterm" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+        </a>
+        <a class="sb" href="https://www.facebook.com/EurotermTernopil" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+
+      <div class="tel-drop" id="tel-drop">
+        <button type="button" class="head-tel call-attention" id="tel-drop-btn" aria-expanded="false" aria-label="Показати номери телефонів відділів">
+          <svg class="icon phone-ring-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+          <span>Зателефонувати</span>
+          <svg class="icon" style="width:15px;height:15px;" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="tel-drop-menu">
+          <a href="tel:+380984782637"><small>Менеджер опалення • Максим</small><b>098 478 26 37</b></a>
+          <a href="tel:+380984782819"><small>Менеджер опалення • Юрій</small><b>098 478 28 19</b></a>
+          <a href="tel:+380673504400"><small>Сервіс опалення • Оксана</small><b>067 350 44 00</b></a>
+          <a href="tel:+380674713402"><small>Монтаж / Інженер • Володимир</small><b>067 471 34 02</b></a>
+          <a href="tel:+380969689103"><small>Водоочистка • Іван</small><b>096 968 91 03</b></a>
+        </div>
+      </div>
+
+      <a class="btn btn-green-bordered btn-sm head-cta" href="#zvyazok">Написати</a>
+      <button type="button" class="burger" id="burger-btn" aria-label="Меню" aria-expanded="false" aria-controls="mnav">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Мобільне меню -->
+<div class="mnav" id="mnav" hidden>
+  <div class="wrap mnav-in">
+    <nav class="mnav-l" aria-label="Мобільне меню">
+      <a href="index.html" class="active">Головна сторінка</a>
+      <a href="katalog.html">Каталог Сервіс</a>
+      <a href="montazh.html">Монтаж опалення</a>
+      <a href="vodoochystka.html">Монтаж Водоочистки</a>
+      <a href="korysna-informatsiya.html">Корисна інформація</a>
+      <a href="#kontakty">Контакти та маршрут</a>
+    </nav>
+
+    <div class="phones-list">
+      <a class="p-card" href="tel:+380984782637">
+        <div class="p-card-info"><span class="p-card-role">Менеджер опалення • Максим</span><span class="p-card-num">098 478 26 37</span></div>
+        <span class="p-card-ico"><svg class="icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></span>
+      </a>
+      <a class="p-card" href="tel:+380984782819">
+        <div class="p-card-info"><span class="p-card-role">Менеджер опалення • Юрій</span><span class="p-card-num">098 478 28 19</span></div>
+        <span class="p-card-ico"><svg class="icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></span>
+      </a>
+      <a class="p-card" href="tel:+380673504400">
+        <div class="p-card-info"><span class="p-card-role">Сервіс опалення • Оксана</span><span class="p-card-num">067 350 44 00</span></div>
+        <span class="p-card-ico"><svg class="icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></span>
+      </a>
+      <a class="p-card" href="tel:+380674713402">
+        <div class="p-card-info"><span class="p-card-role">Монтаж / Інженер • Володимир</span><span class="p-card-num">067 471 34 02</span></div>
+        <span class="p-card-ico"><svg class="icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></span>
+      </a>
+      <a class="p-card" href="tel:+380969689103">
+        <div class="p-card-info"><span class="p-card-role">Водоочистка • Іван</span><span class="p-card-num">096 968 91 03</span></div>
+        <span class="p-card-ico"><svg class="icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></span>
+      </a>
+    </div>
+
+    <div class="mnav-cta">
+      <a class="btn btn-green-bordered btn-full" href="#zvyazok">Написати в месенджер</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ==================== ГОЛОВНИЙ ЕКРАН ==================== -->
+<section class="hero hero-split">
+  <div class="wrap hero-grid">
+  <div class="hero-copy">
+    <span class="eyebrow hero-since">Тернопіль та область • З 1999 року</span>
+
+    <img class="hero-logo" src="img/eurotermlogo.gif" alt="Євротерм Тернопіль — логотип" width="220" height="220">
+
+    <h1>Монтаж інженерних рішень та <span class="acc">гуртовий продаж обладнання</span></h1>
+    <p class="hero-lead">Повний асортимент для опалення, водопостачання, сантехніки та водоочистки. Власний сервіс, оптові умови для інсталяторів та безкоштовна доставка по Тернопільській області.</p>
+    <div class="pb-go" style="justify-content: center; margin-bottom: 36px;">
+      <a class="btn btn-green-bordered" href="katalog.html">Каталог Сервіс</a>
+      <a class="btn btn-green-bordered" href="montazh.html">Монтаж опалення</a>
+      <a class="btn btn-green-bordered" href="vodoochystka.html">Монтаж Водоочистки</a>
+      <a class="btn btn-green-bordered" href="korysna-informatsiya.html">Корисна інформація</a>
+    </div>
+  </div>
+    <div class="hw">
+      <figure>
+        <img src="img/magazyn.webp" alt="Магазин Євротерм-Тернопіль з вулиці">
+        <a class="ybadge" href="#kontakty" aria-label="Контакти та графік роботи Євротерм-Тернопіль">
+          <div class="yb-av">
+            <svg viewBox="0 0 120 100" aria-hidden="true">
+              <path d="M90 19 A39 39 0 1 0 90 81" fill="none" stroke="#232321" stroke-width="14"/>
+              <path d="M90 19 A39 39 0 0 1 90 81" fill="none" stroke="#85C240" stroke-width="14"/>
+              <line x1="9" y1="50" x2="62" y2="50" stroke="#232321" stroke-width="14" stroke-linecap="round"/>
+              <circle cx="64" cy="50" r="12" fill="#232321"/>
+            </svg>
+          </div>
+          <span>
+            <b>Євротерм-Тернопіль</b>
+            <small id="hero-live-status"><i class="dot-live"></i>вул. Об'їзна, 19 • Пн–Пт 9–18, Сб 9–13</small>
+          </span>
+          <svg class="icon yb-go" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </a>
+      </figure>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <ul class="facts">
+      <li><b>З 1999 року на ринку</b><span>Понад 25 років інженерного досвіду в Тернополі та області</span></li>
+      <li><b>Безкоштовна доставка</b><span>Привеземо замовлення у межах Тернопільської області</span></li>
+      <li><b>Власний сервіс котлів</b><span>Обслуговування, ремонт та запчастини в наявності</span></li>
+      <li><b>Для інсталяторів</b><span>Гуртові ціни та безкоштовна оренда інструменту</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== ПРО КОМПАНІЮ ==================== -->
+<section class="sec" id="pro-nas">
+  <div class="wrap">
+    <div class="about">
+      <div class="about-logo-box">
+        <svg viewBox="0 0 120 100" aria-hidden="true">
+          <path d="M90 19 A39 39 0 1 0 90 81" fill="none" stroke="#232321" stroke-width="13.5"/>
+          <path d="M90 19 A39 39 0 0 1 90 81" fill="none" stroke="#85C240" stroke-width="13.5"/>
+          <line x1="9" y1="50" x2="62" y2="50" stroke="#232321" stroke-width="13.5" stroke-linecap="round"/>
+          <circle cx="64" cy="50" r="11.5" fill="#232321"/>
+        </svg>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">Про компанію</span>
+        <h2>Євротерм-Тернопіль — надійний інженерний партнер з 1999 року</h2>
+        <p><b>«Євротерм-Тернопіль»</b> — торгово-монтажна інженерна організація, яка вже понад <b>25 років</b> забезпечує приватні будинки, квартири та комерційні об'єкти сучасними системами опалення, водопостачання, сантехніки, кондиціювання та водопідготовки.</p>
+        <p>Наш магазин-склад розташований за адресою <b>вул. Об'їзна, 19, Великі Гаї</b> (поруч з Тернополем). Ми працюємо по такому принципу: підбираємо обладнання провідних європейських та українських брендів, безкоштовно доставляємо матеріали по всій Тернопільській області, виконуємо монтаж під ключ та забезпечуємо подальший сервісний супровід.</p>
+        <div class="nums">
+          <div><b>з 1999 р.</b><span>досвіду на ринку</span></div>
+          <div><b>0 грн</b><span>доставка по області</span></div>
+          <div><b>100%</b><span>сервіс та запчастини</span></div>
+        </div>
+        <div class="socs">
+          <a class="btn btn-green-bordered btn-sm" href="katalog.html">Переглянути каталог</a>
+          <a class="btn btn-green-bordered btn-sm" href="korysna-informatsiya.html">Калькулятори та поради</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 2 ОСНОВНІ НАПРЯМКИ ТА НАШІ ПЕРЕВАГИ ==================== -->
+<section class="sec sec-alt" id="napryamky">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Як ми працюємо</span>
+      <h2>Два основні напрямки «Євротерм-Тернопіль»</h2>
+      <p class="lead">Працюємо як для приватних замовників, так і для бізнесу, монтажників та організацій.</p>
+    </div>
+
+    <div class="dir-grid">
+      <!-- Картка 1: Монтаж під ключ -->
+      <article class="dir-card">
+        <div class="dir-ph"><img src="img/kotelnya.webp" alt="Котельня під ключ: газовий котел, бойлер, колектор опалення"></div>
+        <div>
+          <div class="dir-top">
+            <span class="dir-ico">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </span>
+            <span class="dir-pill">Інженерні системи під ключ</span>
+          </div>
+          <h3>Монтаж під ключ</h3>
+          <p>Проєктуємо та монтуємо системи опалення, котельні, теплу підлогу, водопостачання та очистку води у будинках, квартирах, а також на фермах, у пташниках, на складах та в інших комерційних приміщеннях.</p>
+          <div class="dir-tags">
+            <span>Квартири та будинки</span>
+            <span>Ферми та пташники</span>
+            <span>Склади та цехи</span>
+            <span>Комерційні об'єкти</span>
+          </div>
+        </div>
+        <div class="dir-actions">
+          <a class="btn btn-green-bordered btn-sm" href="montazh.html">Монтаж опалення <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-green-bordered btn-sm" href="vodoochystka.html">Монтаж Водоочистки</a>
+        </div>
+      </article>
+
+      <!-- Картка 2: Гуртовий продаж -->
+      <article class="dir-card">
+        <div class="dir-ph"><img src="img/kolodci.jpg" alt="Система водоочистки: колони пом'якшення та фільтри"></div>
+        <div>
+          <div class="dir-top">
+            <span class="dir-ico">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </span>
+            <span class="dir-pill">Склад • Великі Гаї</span>
+          </div>
+          <h3>Гуртовий продаж</h3>
+          <p>Продаємо обладнання для опалення, водопостачання та водоочистки зі складу у Великих Гаях за вигідними гуртовими цінами. Комплектуємо приватні об'єкти, монтажні бригади, будівельні компанії та підприємства.</p>
+          <div class="dir-tags">
+            <span>Опалення та котли</span>
+            <span>Труби та радіатори</span>
+            <span>Водопостачання</span>
+            <span>Водоочистка</span>
+          </div>
+        </div>
+        <div class="dir-actions">
+          <a class="btn btn-green-bordered btn-sm" href="katalog.html">Переглянути каталог <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-green-bordered btn-sm" href="katalog.html#instalyatoram">Для інсталяторів</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Наші переваги -->
+    <div class="sec-head">
+      <span class="eyebrow">Чому обирають нас</span>
+      <h2>Наші переваги</h2>
+    </div>
+
+    <div class="adv-grid">
+      <div class="adv-card">
+        <div>
+          <div class="adv-head">
+            <span class="adv-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+            <span class="adv-num">01</span>
+          </div>
+          <h3>Вигідні гуртові ціни</h3>
+          <p>Прямі поставки обладнання та матеріалів без зайвих націнок. Спеціальні умови для монтажників та при комплексному замовленні.</p>
+        </div>
+      </div>
+
+      <div class="adv-card">
+        <div>
+          <div class="adv-head">
+            <span class="adv-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <span class="adv-num">02</span>
+          </div>
+          <h3>Кваліфіковані працівники</h3>
+          <p>Досвідчені інженери, сервісні майстри та монтажні бригади з практичним досвідом роботи на приватних і промислових об'єктах.</p>
+        </div>
+      </div>
+
+      <div class="adv-card">
+        <div>
+          <div class="adv-head">
+            <span class="adv-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+            <span class="adv-num">03</span>
+          </div>
+          <h3>Надаємо гарантію</h3>
+          <p>Офіційна гарантія на все придбане обладнання та виконані монтажні роботи.</p>
+        </div>
+      </div>
+
+      <div class="adv-card">
+        <div>
+          <div class="adv-head">
+            <span class="adv-ico"><svg class="icon" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+            <span class="adv-num">04</span>
+          </div>
+          <h3>Безкоштовна доставка</h3>
+          <p>Привеземо замовлені матеріали чи обладнання власним транспортом по Тернополю та області.</p>
+        </div>
+      </div>
+
+      <div class="adv-card">
+        <div>
+          <div class="adv-head">
+            <span class="adv-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+            <span class="adv-num">05</span>
+          </div>
+          <h3>Консультація на об'єкті</h3>
+          <p>Виїзд інженера на ваш будинок, ферму, склад чи інший об'єкт для замірів, підбору обладнання та складання точного кошторису.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== КОНТАКТИ, ГРАФІК, КАРТА, НАВІГАТОР ТА ЗАЯВКА ==================== -->
+<section class="sec order-s" id="kontakty">
+  <div class="wrap order" id="zvyazok">
+    <div class="order-side">
+      <span class="eyebrow">Контакти та навігатор маршруту</span>
+      <h2>Зв'яжіться з потрібним відділом</h2>
+      <p class="lead">Пишіть у Telegram чи Viber, телефонуйте або надсилайте e-mail потрібному відділу — або прокладіть маршрут до нашого магазину-складу.</p>
+
+      <div class="addr-box">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <div>
+          <b>Магазин-склад «Євротерм-Тернопіль»:</b>
+          <span>вулиця Об'їзна, 19, Великі Гаї, Тернопільська область, 47722</span>
+        </div>
+      </div>
+
+      <!-- Живий статус графіка роботи + карта + маршрут -->
+      <div class="schedule-card">
+        <div class="live-status-pill is-open" id="live-status-pill">
+          <span class="status-dot"></span>
+          <span id="live-status-text">Перевіряємо графік роботи...</span>
+        </div>
+
+        <div class="sched-grid">
+          <div class="sched-day">
+            <small>Пн – Пт</small>
+            <b>09:00 – 18:00</b>
+          </div>
+          <div class="sched-day">
+            <small>Субота</small>
+            <b>09:00 – 13:00</b>
+          </div>
+          <div class="sched-day day-off">
+            <small>Неділя</small>
+            <b>Вихідний</b>
+          </div>
+        </div>
+
+        <div class="map-wrap">
+          <iframe
+            title="Карта проїзду до магазину Євротерм-Тернопіль, вул. Об'їзна, 19, Великі Гаї"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9E%D0%B1'%D1%97%D0%B7%D0%BD%D0%B0,%2019,%20%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D1%96%20%D0%93%D0%B0%D1%97,%20%D0%A2%D0%B5%D1%80%D0%BD%D0%BE%D0%BF%D1%96%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B0%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C&t=&z=15&ie=UTF8&iwloc=&output=embed">
+          </iframe>
+        </div>
+
+        <div class="route-btns">
+          <a class="route-btn" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%9E%D0%B1'%D1%97%D0%B7%D0%BD%D0%B0,+19,+%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D1%96+%D0%93%D0%B0%D1%97,+%D0%A2%D0%B5%D1%80%D0%BD%D0%BE%D0%BF%D1%96%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C" target="_blank" rel="noopener">
+            <svg class="icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <span>Маршрут у Google Maps</span>
+          </a>
+          <a class="route-btn" href="https://waze.com/ul?q=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9E%D0%B1'%D1%97%D0%B7%D0%BD%D0%B0%2019%20%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D1%96%20%D0%93%D0%B0%D1%97&navigate=yes" target="_blank" rel="noopener">
+            <svg class="icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+            <span>Їхати через Waze</span>
+          </a>
+        </div>
+      </div>
+
+          </div>
+
+    <div class="msg-card">
+      <h3>Напишіть у месенджер</h3>
+      <p class="msg-sub">Оберіть відділ і натисніть Telegram або Viber — розмова відкриється одразу з потрібним спеціалістом. Без анкет і реєстрації.</p>
+      <div class="msg-list">
+      <div class="msg-row">
+        <div class="msg-who">
+          <span class="msg-role">Менеджер опалення • Максим</span>
+          <a class="msg-phone" href="tel:+380984782637">098 478 26 37</a>
+          <a class="msg-mail" href="mailto:mk@euro-term.com.ua">mk@euro-term.com.ua</a>
+        </div>
+        <div class="msg-acts">
+          <a class="msg-btn msg-tg" href="https://t.me/+380984782637?text=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F%21%20%D0%A6%D1%96%D0%BA%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D0%BE%D0%BF%D0%B0%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F%20/%20%D0%BE%D0%B1%D0%BB%D0%B0%D0%B4%D0%BD%D0%B0%D0%BD%D0%BD%D1%8F%20%D0%B7%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%D1%83." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><span>Telegram</span></a>
+          <a class="msg-btn msg-vb" href="viber://chat?number=%2B380984782637"><svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6A8.4 8.4 0 0 1 12.5 3H13a8.5 8.5 0 0 1 8 8z"/></svg><span>Viber</span></a>
+          <a class="msg-btn msg-call" href="tel:+380984782637" aria-label="Подзвонити 098 478 26 37" title="Подзвонити"><svg class="icon" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></a>
+        </div>
+      </div>
+      <div class="msg-row">
+        <div class="msg-who">
+          <span class="msg-role">Менеджер опалення • Юрій</span>
+          <a class="msg-phone" href="tel:+380984782819">098 478 28 19</a>
+          <a class="msg-mail" href="mailto:uh@euro-term.com.ua">uh@euro-term.com.ua</a>
+        </div>
+        <div class="msg-acts">
+          <a class="msg-btn msg-tg" href="https://t.me/+380984782819?text=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F%21%20%D0%A6%D1%96%D0%BA%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D0%BE%D0%BF%D0%B0%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F%20/%20%D0%BE%D0%B1%D0%BB%D0%B0%D0%B4%D0%BD%D0%B0%D0%BD%D0%BD%D1%8F%20%D0%B7%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%D1%83." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><span>Telegram</span></a>
+          <a class="msg-btn msg-vb" href="viber://chat?number=%2B380984782819"><svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6A8.4 8.4 0 0 1 12.5 3H13a8.5 8.5 0 0 1 8 8z"/></svg><span>Viber</span></a>
+          <a class="msg-btn msg-call" href="tel:+380984782819" aria-label="Подзвонити 098 478 28 19" title="Подзвонити"><svg class="icon" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></a>
+        </div>
+      </div>
+      <div class="msg-row">
+        <div class="msg-who">
+          <span class="msg-role">Сервіс опалення • Оксана</span>
+          <a class="msg-phone" href="tel:+380673504400">067 350 44 00</a>
+          <a class="msg-mail" href="mailto:info@euro-term.com.ua">info@euro-term.com.ua</a>
+        </div>
+        <div class="msg-acts">
+          <a class="msg-btn msg-tg" href="https://t.me/+380673504400?text=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F%21%20%D0%9F%D0%BE%D1%82%D1%80%D1%96%D0%B1%D0%B5%D0%BD%20%D1%81%D0%B5%D1%80%D0%B2%D1%96%D1%81%20/%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%20%D0%BA%D0%BE%D1%82%D0%BB%D0%B0%20%D1%87%D0%B8%20%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B8." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><span>Telegram</span></a>
+          <a class="msg-btn msg-vb" href="viber://chat?number=%2B380673504400"><svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6A8.4 8.4 0 0 1 12.5 3H13a8.5 8.5 0 0 1 8 8z"/></svg><span>Viber</span></a>
+          <a class="msg-btn msg-call" href="tel:+380673504400" aria-label="Подзвонити 067 350 44 00" title="Подзвонити"><svg class="icon" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></a>
+        </div>
+      </div>
+      <div class="msg-row">
+        <div class="msg-who">
+          <span class="msg-role">Монтаж / Інженер • Володимир</span>
+          <a class="msg-phone" href="tel:+380674713402">067 471 34 02</a>
+          <a class="msg-mail" href="mailto:vl@euro-term.com.ua">vl@euro-term.com.ua</a>
+        </div>
+        <div class="msg-acts">
+          <a class="msg-btn msg-tg" href="https://t.me/+380674713402?text=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F%21%20%D0%A6%D1%96%D0%BA%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%20%D0%BE%D0%BF%D0%B0%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><span>Telegram</span></a>
+          <a class="msg-btn msg-vb" href="viber://chat?number=%2B380674713402"><svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6A8.4 8.4 0 0 1 12.5 3H13a8.5 8.5 0 0 1 8 8z"/></svg><span>Viber</span></a>
+          <a class="msg-btn msg-call" href="tel:+380674713402" aria-label="Подзвонити 067 471 34 02" title="Подзвонити"><svg class="icon" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></a>
+        </div>
+      </div>
+      <div class="msg-row">
+        <div class="msg-who">
+          <span class="msg-role">Водоочистка • Іван</span>
+          <a class="msg-phone" href="tel:+380969689103">096 968 91 03</a>
+          <a class="msg-mail" href="mailto:voda@euro-term.com.ua">voda@euro-term.com.ua</a>
+        </div>
+        <div class="msg-acts">
+          <a class="msg-btn msg-tg" href="https://t.me/+380969689103?text=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F%21%20%D0%A6%D1%96%D0%BA%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BE%D0%B4%D0%BE%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0%20/%20%D1%81%D1%96%D0%BB%D1%8C%20PARLA." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><span>Telegram</span></a>
+          <a class="msg-btn msg-vb" href="viber://chat?number=%2B380969689103"><svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6A8.4 8.4 0 0 1 12.5 3H13a8.5 8.5 0 0 1 8 8z"/></svg><span>Viber</span></a>
+          <a class="msg-btn msg-call" href="tel:+380969689103" aria-label="Подзвонити 096 968 91 03" title="Подзвонити"><svg class="icon" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></a>
+        </div>
+      </div>
+      </div>
+      <p class="msg-note">Відповідаємо у робочий час: Пн–Пт 09:00–18:00, Сб 09:00–13:00.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ==================== ПІДВАЛ САЙТУ ==================== -->
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <a class="brand-logo" href="index.html">
+        <svg viewBox="0 0 120 100" aria-hidden="true">
+          <path d="M90 19 A39 39 0 1 0 90 81" fill="none" stroke="#ffffff" stroke-width="13.5"/>
+          <path d="M90 19 A39 39 0 0 1 90 81" fill="none" stroke="#85C240" stroke-width="13.5"/>
+          <line x1="9" y1="50" x2="62" y2="50" stroke="#ffffff" stroke-width="13.5" stroke-linecap="round"/>
+          <circle cx="64" cy="50" r="11.5" fill="#ffffff"/>
+        </svg>
+        <div class="brand-name">
+          <strong>ЄВРОТЕРМ</strong>
+          <span>Тернопіль</span>
+        </div>
+      </a>
+      <p style="margin-top:14px;max-width:34ch;font-size:0.9rem;">Торгово-монтажна інженерна організація з 1999 року: монтаж інженерних рішень та гуртовий продаж обладнання для опалення, водопостачання і водоочистки у Тернополі та області.</p>
+      <p style="margin-top:10px;font-size:0.85rem;color:rgba(255,255,255,0.72);">Графік роботи: Пн–Пт 09:00–18:00, Сб 09:00–13:00, Нд — вихідний.</p>
+    </div>
+
+    <div>
+      <h3>Розділи сайту</h3>
+      <ul>
+        <li><a href="index.html">Головна сторінка</a></li>
+        <li><a href="katalog.html">Каталог Сервіс</a></li>
+        <li><a href="montazh.html">Монтаж опалення</a></li>
+        <li><a href="vodoochystka.html">Монтаж Водоочистки</a></li>
+        <li><a href="korysna-informatsiya.html">Корисна інформація</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Швидкі посилання</h3>
+      <ul>
+        <li><a href="katalog.html#catalog">Каталог товарів</a></li>
+        <li><a href="katalog.html#servis">Сервіс котлів</a></li>
+        <li><a href="katalog.html#instalyatoram">Для інсталяторів (B2B)</a></li>
+        <li><a href="korysna-informatsiya.html#kalkulyator">Онлайн-калькулятори</a></li>
+        <li><a href="korysna-informatsiya.html#gid-pomylok">Гід по помилках котлів</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Контакти</h3>
+      <ul class="ci">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+          <div class="foot-ph">
+            <small>Менеджер опалення Максим</small>
+            <a href="tel:+380984782637"><b>098 478 26 37</b></a>
+            <a class="foot-mail" href="mailto:mk@euro-term.com.ua">mk@euro-term.com.ua</a>
+          </div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+          <div class="foot-ph">
+            <small>Менеджер опалення Юрій</small>
+            <a href="tel:+380984782819"><b>098 478 28 19</b></a>
+            <a class="foot-mail" href="mailto:uh@euro-term.com.ua">uh@euro-term.com.ua</a>
+          </div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+          <div class="foot-ph">
+            <small>Сервіс опалення • Оксана</small>
+            <a href="tel:+380673504400"><b>067 350 44 00</b></a>
+            <a class="foot-mail" href="mailto:info@euro-term.com.ua">info@euro-term.com.ua</a>
+          </div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+          <div class="foot-ph">
+            <small>Монтаж / Інженер • Володимир</small>
+            <a href="tel:+380674713402"><b>067 471 34 02</b></a>
+            <a class="foot-mail" href="mailto:vl@euro-term.com.ua">vl@euro-term.com.ua</a>
+          </div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+          <div class="foot-ph">
+            <small>Водоочистка • Іван</small>
+            <a href="tel:+380969689103"><b>096 968 91 03</b></a>
+            <a class="foot-mail" href="mailto:voda@euro-term.com.ua">voda@euro-term.com.ua</a>
+          </div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <span>вулиця Об'їзна, 19, Великі Гаї, Тернопільська область, 47722</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-main" href="katalog.html">Каталог Сервіс</a>
+  <a class="btn btn-main" href="korysna-informatsiya.html">Калькулятори</a>
+  <a class="btn btn-ghost" href="tel:+380984782637" aria-label="Подзвонити">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+  </a>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  function updateLiveSchedule() {
+    const pill = document.getElementById('live-status-pill');
+    const textEl = document.getElementById('live-status-text');
+    const heroStatus = document.getElementById('hero-live-status');
+    if (!pill || !textEl) return;
+
+    const now = new Date();
+    const kyivParts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'Europe/Kyiv',
+      weekday: 'short',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    }).formatToParts(now);
+
+    const dayStr = kyivParts.find(p => p.type === 'weekday')?.value || 'Mon';
+    const hour = parseInt(kyivParts.find(p => p.type === 'hour')?.value || '10', 10);
+    const minute = parseInt(kyivParts.find(p => p.type === 'minute')?.value || '0', 10);
+    const totalMinutes = hour * 60 + minute;
+
+    const isSun = dayStr === 'Sun';
+    const isSat = dayStr === 'Sat';
+    const openMin = 9 * 60;
+    const closeMin = isSat ? 13 * 60 : 18 * 60;
+
+    let isOpen = false;
+    let statusMsg = '';
+    let shortMsg = '';
+
+    if (isSun) {
+      isOpen = false;
+      statusMsg = 'Сьогодні неділя (вихідний) • Чекаємо у понеділок з 09:00';
+      shortMsg = 'Нд — вихідний • Відчиняємось у Пн о 09:00';
+    } else if (totalMinutes >= openMin && totalMinutes < closeMin) {
+      isOpen = true;
+      const closeLabel = isSat ? '13:00' : '18:00';
+      statusMsg = `Зараз відчинено (до ${closeLabel}) — чекаємо в магазині!`;
+      shortMsg = `Зараз відчинено до ${closeLabel} • вул. Об'їзна, 19`;
+    } else if (totalMinutes < openMin) {
+      isOpen = false;
+      statusMsg = 'Зараз зачинено • Відчиняємось сьогодні о 09:00';
+      shortMsg = 'Відчиняємось о 09:00 • вул. Об\'їзна, 19';
+    } else {
+      isOpen = false;
+      const nextDay = isSat ? 'у понеділок' : 'завтра';
+      statusMsg = `Робочий день завершено • Відчиняємось ${nextDay} о 09:00`;
+      shortMsg = `Зачинено • Відчиняємось ${nextDay} о 09:00`;
+    }
+
+    pill.classList.toggle('is-open', isOpen);
+    pill.classList.toggle('is-closed', !isOpen);
+    textEl.textContent = statusMsg;
+    if (heroStatus) {
+      heroStatus.innerHTML = `<i class="dot-live" style="background:${isOpen ? '#85C240' : '#f59e0b'}"></i>${shortMsg}`;
+    }
+  }
+  updateLiveSchedule();
+  setInterval(updateLiveSchedule, 60000);
+});
+</script>
+</body>
+</html>

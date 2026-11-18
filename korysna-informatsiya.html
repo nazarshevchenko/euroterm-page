@@ -1,0 +1,1210 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Корисна інформація: калькулятор опалення, економія газу та гід по поширених помилках котлів | Євротерм-Тернопіль</title>
+<meta name="description" content="Онлайн-калькулятор підбору котла, теплої підлоги та економії газу з програматором. Обов'язковий захист котла (стабілізатор, газосигналізатор) та гід по поширених кодах помилок котлів.">
+<meta name="theme-color" content="#85C240">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 100'%3E%3Cpath d='M92 20 A40 40 0 1 0 92 80' fill='none' stroke='%23232321' stroke-width='14' stroke-linecap='butt'/%3E%3Cpath d='M92 20 A40 40 0 0 1 92 80' fill='none' stroke='%2385C240' stroke-width='14' stroke-linecap='butt'/%3E%3Cline x1='10' y1='50' x2='62' y2='50' stroke='%232321' stroke-width='14' stroke-linecap='round'/%3E%3Ccircle cx='64' cy='50' r='12' fill='%232321'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<style>
+
+  /* ==================== КАЛЬКУЛЯТОР ОПАЛЕННЯ ==================== */
+  .calc-box {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: clamp(22px, 3.5vw, 38px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(24px, 4vw, 42px);
+    align-items: center;
+  }
+  .calc-group { margin-bottom: 22px; }
+  .calc-group:last-child { margin-bottom: 0; }
+  .calc-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+    gap: 12px;
+  }
+  .calc-label-row span { font-weight: 700; font-size: 0.95rem; color: #181a15; }
+  .calc-area-val {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: #181a15;
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    padding: 3px 12px;
+    border-radius: 10px;
+  }
+  .calc-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 999px;
+    background: #e5e8df;
+    border: 1px solid var(--line);
+    outline: none;
+    cursor: pointer;
+  }
+  .calc-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 1px solid var(--line);
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  }
+  .calc-scale {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.76rem;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+  .calc-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .calc-pill {
+    flex: 1 1 auto;
+    min-width: 90px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: #f8f9f6;
+    color: #181a15;
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+  }
+  .calc-pill:hover {
+    transform: translateY(-2px);
+    background: #eef8e2;
+  }
+  .calc-pill.active {
+    background: var(--accent);
+    color: #181a15;
+    border: 1px solid var(--line);
+    font-weight: 800;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+
+  .calc-result {
+    background: #181a15;
+    color: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: clamp(20px, 3vw, 28px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .calc-res-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding-bottom: 12px;
+    gap: 10px;
+  }
+  .calc-res-head span:first-child { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.68); font-weight: 700; }
+  .calc-res-badge { background: rgba(133, 194, 64, 0.18); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
+  .calc-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .calc-metric { background: rgba(255,255,255,0.06); border: 1.5px solid rgba(255,255,255,0.18); border-radius: 14px; padding: 13px 14px; }
+  .calc-metric small { display: block; font-size: 0.76rem; color: rgba(255,255,255,0.68); margin-bottom: 4px; }
+  .calc-metric b { display: block; font-size: 1.12rem; color: var(--accent); line-height: 1.25; }
+  .calc-note { font-size: 0.8rem; color: rgba(255,255,255,0.65); line-height: 1.45; margin: 0; }
+
+  /* ==================== КАЛЬКУЛЯТОР ЕКОНОМІЇ ГАЗУ (ПРОГРАМАТОР) ==================== */
+  .prog-card {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: clamp(22px, 3.5vw, 38px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(24px, 4vw, 42px);
+    align-items: stretch;
+  }
+  .prog-area-pills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 10px 0 18px;
+  }
+  .prog-pill {
+    padding: 11px 8px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: #f8f9f6;
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: #181a15;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+  }
+  .prog-pill:hover {
+    transform: translateY(-2px);
+    background: #eef8e2;
+  }
+  .prog-pill.active {
+    background: var(--accent);
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .prog-how-list {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0;
+    display: grid;
+    gap: 10px;
+  }
+  .prog-how-list li {
+    background: #f8f9f6;
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    padding: 11px 14px;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    color: #232321;
+  }
+  .prog-how-list li b { display: block; color: #181a15; margin-bottom: 2px; }
+  .prog-res-panel {
+    background: #181a15;
+    color: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: clamp(20px, 3vw, 28px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .prog-kpi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .prog-kpi {
+    background: rgba(255,255,255,0.07);
+    border: 1.5px solid rgba(255,255,255,0.2);
+    border-radius: 15px;
+    padding: 14px 15px;
+  }
+  .prog-kpi.kpi-big {
+    grid-column: 1 / -1;
+    background: rgba(133, 194, 64, 0.16);
+    border-color: var(--accent);
+  }
+  .prog-kpi small { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.72); margin-bottom: 4px; }
+  .prog-kpi strong { display: block; font-size: 1.28rem; color: #ffffff; font-weight: 900; }
+  .prog-kpi.kpi-big strong { font-size: clamp(1.4rem, 2.5vw, 1.9rem); color: var(--accent); }
+
+  /* ==================== ОБОВ'ЯЗКОВИЙ ЗАХИСТ КОТЛА ==================== */
+  .safety-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .safety-card {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: clamp(22px, 3vw, 34px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+    transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease;
+  }
+  .safety-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .safety-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    color: #181a15;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+  .safety-card h3 { font-size: 1.25rem; margin: 0 0 10px; color: #181a15; }
+  .safety-card p { font-size: 0.92rem; color: var(--muted); line-height: 1.55; margin: 0 0 12px; }
+  .safety-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 9px;
+  }
+  .safety-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 0.88rem;
+    color: #232321;
+    line-height: 1.45;
+  }
+  .safety-points li svg {
+    width: 17px;
+    height: 17px;
+    color: var(--accent-dark);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .safety-alert {
+    background: #eef8e2;
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--accent);
+    border-radius: 12px;
+    padding: 11px 14px;
+    font-size: 0.86rem;
+    color: #181a15;
+    line-height: 1.45;
+  }
+
+  /* ==================== ГІД ПО ПОШИРЕНИХ КОДАХ ПОМИЛОК КОТЛІВ ==================== */
+  .err-guide-box {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: clamp(22px, 3.5vw, 36px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .err-guide-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .err-guide-head h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); margin: 4px 0 6px; color: #181a15; }
+  .err-guide-head p { margin: 0; font-size: 0.92rem; color: var(--muted); max-width: 62ch; }
+  .err-search-wrap { position: relative; min-width: 250px; flex: 0 1 300px; }
+  .err-search-inp {
+    width: 100%;
+    padding: 11px 14px 11px 38px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: #f8f9f6;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #181a15;
+    outline: none;
+  }
+  .err-search-inp:focus { border-color: #181a15; background: #ffffff; box-shadow: 0 10px 28px rgba(24,26,21,.08); }
+  .err-search-ico { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 17px; height: 17px; color: #181a15; pointer-events: none; }
+  .err-brands { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .err-brand-btn {
+    padding: 9px 15px;
+    border-radius: 11px;
+    border: 1px solid var(--line);
+    background: #f8f9f6;
+    color: #181a15;
+    font-weight: 800;
+    font-size: 0.86rem;
+    cursor: pointer;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    transition: transform 0.16s ease, background 0.16s ease;
+  }
+  .err-brand-btn:hover {
+    transform: translateY(-2px);
+    background: #eef8e2;
+  }
+  .err-brand-btn.active {
+    background: var(--accent);
+    color: #181a15;
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .err-codes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .err-code-chip {
+    padding: 7px 13px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: #ffffff;
+    color: #181a15;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-weight: 800;
+    font-size: 0.88rem;
+    cursor: pointer;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    transition: transform 0.16s ease, background 0.16s ease;
+  }
+  .err-code-chip:hover {
+    transform: translateY(-2px);
+    background: #eef8e2;
+  }
+  .err-code-chip.active {
+    background: #181a15;
+    color: var(--accent);
+    border: 1px solid var(--line);
+  }
+  .err-result-card {
+    background: #f7f9f4;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: clamp(18px, 3vw, 26px);
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 22px;
+    align-items: center;
+  }
+  .err-res-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #181a15;
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 0.84rem;
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+  .err-res-title { font-size: 1.18rem; font-weight: 800; color: #181a15; margin: 0 0 12px; line-height: 1.3; }
+  .err-res-steps { display: grid; gap: 10px; }
+  .err-step-row { background: #ffffff; border: 1px solid var(--line); border-radius: 12px; padding: 11px 14px; font-size: 0.88rem; line-height: 1.45; color: #232321; }
+  .err-step-row strong { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 3px; }
+  .err-step-row.self-check strong { color: #3a750c; }
+  .err-step-row.master-check strong { color: #b54708; }
+  .err-res-cta {
+    background: #181a15;
+    color: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .err-res-cta p { margin: 0; font-size: 0.86rem; color: rgba(255,255,255,0.78); line-height: 1.45; }
+
+  @media (max-width: 880px) {
+    .calc-box,
+    .prog-card,
+    .safety-grid,
+    .err-result-card {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 560px) {
+    .calc-metrics,
+    .prog-area-pills,
+    .prog-kpi-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<!-- ==================== ШАПКА САЙТУ ==================== -->
+<header class="head">
+  <div class="wrap">
+    <a class="brand-logo" href="index.html" aria-label="Євротерм-Тернопіль, на головну">
+      <svg viewBox="0 0 120 100" aria-hidden="true">
+        <path d="M90 19 A39 39 0 1 0 90 81" fill="none" stroke="#232321" stroke-width="13.5" stroke-linecap="butt"/>
+        <path d="M90 19 A39 39 0 0 1 90 81" fill="none" stroke="#85C240" stroke-width="13.5" stroke-linecap="butt"/>
+        <line x1="9" y1="50" x2="62" y2="50" stroke="#232321" stroke-width="13.5" stroke-linecap="round"/>
+        <circle cx="64" cy="50" r="11.5" fill="#232321"/>
+      </svg>
+      <div class="brand-name">
+        <strong>ЄВРОТЕРМ</strong>
+        <span>Тернопіль</span>
+      </div>
+    </a>
+
+    <nav class="nav" aria-label="Основне меню">
+      <a href="index.html">Головна сторінка</a>
+      <a href="katalog.html">Каталог Сервіс</a>
+      <a href="montazh.html">Монтаж опалення</a>
+      <a href="vodoochystka.html">Монтаж Водоочистки</a>
+      <a href="korysna-informatsiya.html" class="active">Корисна інформація</a>
+    </nav>
+
+    <div class="head-r">
+      <div class="head-socs">
+        <a class="sb" href="https://www.instagram.com/euroterm.ternopil" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a class="sb" href="https://www.tiktok.com/@euroterm" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+        </a>
+        <a class="sb" href="https://www.facebook.com/EurotermTernopil" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+
+      <div class="tel-drop" id="tel-drop">
+        <button type="button" class="head-tel call-attention" id="tel-drop-btn" aria-expanded="false" aria-label="Показати номери телефонів відділів">
+          <svg class="icon phone-ring-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+          <span>Зателефонувати</span>
+          <svg class="icon" style="width:15px;height:15px;" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="tel-drop-menu">
+          <a href="tel:+380984782637"><small>Менеджер опалення • Максим</small><b>098 478 26 37</b></a>
+          <a href="tel:+380984782819"><small>Менеджер опалення • Юрій</small><b>098 478 28 19</b></a>
+          <a href="tel:+380673504400"><small>Сервіс опалення • Оксана</small><b>067 350 44 00</b></a>
+          <a href="tel:+380674713402"><small>Монтаж / Інженер • Володимир</small><b>067 471 34 02</b></a>
+          <a href="tel:+380969689103"><small>Водоочистка • Іван</small><b>096 968 91 03</b></a>
+        </div>
+      </div>
+
+      <a class="btn btn-green-bordered btn-sm head-cta" href="index.html#zvyazok">Написати</a>
+      <button type="button" class="burger" id="burger-btn" aria-label="Меню" aria-expanded="false" aria-controls="mnav">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Мобільне меню -->
+<div class="mnav" id="mnav" hidden>
+  <div class="wrap mnav-in">
+    <nav class="mnav-l" aria-label="Мобільне меню">
+      <a href="index.html">Головна сторінка</a>
+      <a href="katalog.html">Каталог Сервіс</a>
+      <a href="montazh.html">Монтаж опалення</a>
+      <a href="vodoochystka.html">Монтаж Водоочистки</a>
+      <a href="korysna-informatsiya.html" class="active">Корисна інформація</a>
+      <a href="index.html#kontakty">Контакти та маршрут</a>
+    </nav>
+
+    <div class="phones-list">
+      <a class="p-card" href="tel:+380984782637">
+        <div class="p-card-info"><span class="p-card-role">Менеджер опалення • Максим</span><span class="p-card-num">098 478 26 37</span></div>
+        <span class="p-card-ico"><svg class="icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></span>
+      </a>
+      <a class="p-card" href="tel:+380673504400">
+        <div class="p-card-info"><span class="p-card-role">Сервіс опалення • Оксана</span><span class="p-card-num">067 350 44 00</span></div>
+        <span class="p-card-ico"><svg class="icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></span>
+      </a>
+      <a class="p-card" href="tel:+380674713402">
+        <div class="p-card-info"><span class="p-card-role">Монтаж / Інженер • Володимир</span><span class="p-card-num">067 471 34 02</span></div>
+        <span class="p-card-ico"><svg class="icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></span>
+      </a>
+      <a class="p-card" href="tel:+380969689103">
+        <div class="p-card-info"><span class="p-card-role">Водоочистка • Іван</span><span class="p-card-num">096 968 91 03</span></div>
+        <span class="p-card-ico"><svg class="icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></span>
+      </a>
+    </div>
+
+    <div class="mnav-cta">
+      <a class="btn btn-main btn-full" href="index.html#zvyazok">Замовити консультацію</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ==================== ПЕРШИЙ ЕКРАН СТОРІНКИ ==================== -->
+<section class="hero" style="padding-bottom: 24px;">
+  <div class="wrap hc">
+    <span class="eyebrow">Інженерні розрахунки та поради</span>
+    <h1>Корисна інформація та <span class="acc">онлайн-калькулятори</span></h1>
+    <p class="hero-lead">Розрахуйте потужність системи опалення, перевірте скільки газу економить програматор, дізнайтеся про обов'язковий захист котла та розшифруйте поширений код помилки на екрані.</p>
+    <div class="pb-go" style="justify-content: center;">
+      <a class="btn btn-green-bordered" href="#kalkulyator">Онлайн-калькулятор</a>
+      <a class="btn btn-green-bordered" href="#ekonomiya-gazu">Економія газу (Програматор)</a>
+      <a class="btn btn-green-bordered" href="#zahyst-kotla">Захист котла</a>
+      <a class="btn btn-green-bordered" href="#gid-pomylok">Поширені помилки</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 1. ОНЛАЙН-КАЛЬКУЛЯТОР ПІДБОРУ ОПАЛЕННЯ ==================== -->
+<section class="sec" style="padding-top: 12px;" id="kalkulyator">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Швидкий інженерний підбір</span>
+      <h2>Онлайн-калькулятор котла та теплої підлоги</h2>
+      <p class="lead">Оберіть площу приміщення, тип об'єкта та вид палива, щоб дізнатися рекомендовану потужність котла, об'єм бойлера та кількість контурів теплої підлоги.</p>
+    </div>
+
+    <div class="calc-box">
+      <div>
+        <div class="calc-group">
+          <div class="calc-label-row">
+            <span>Опалювальна площа приміщення:</span>
+            <strong class="calc-area-val" id="calc-area-display">120 м²</strong>
+          </div>
+          <input type="range" class="calc-slider" id="calc-area" min="40" max="350" step="5" value="120" aria-label="Площа приміщення в квадратних метрах">
+          <div class="calc-scale">
+            <span>40 м²</span>
+            <span>120 м²</span>
+            <span>200 м²</span>
+            <span>280 м²</span>
+            <span>350 м²</span>
+          </div>
+        </div>
+
+        <div class="calc-group">
+          <div class="calc-label-row">
+            <span>Тип об'єкта:</span>
+          </div>
+          <div class="calc-pills" id="calc-type-pills">
+            <button type="button" class="calc-pill active" data-type="house">Приватний будинок</button>
+            <button type="button" class="calc-pill" data-type="flat">Квартира</button>
+          </div>
+        </div>
+
+        <div class="calc-group">
+          <div class="calc-label-row">
+            <span>Основне джерело тепла:</span>
+          </div>
+          <div class="calc-pills" id="calc-fuel-pills">
+            <button type="button" class="calc-pill active" data-fuel="gas">Газовий котел</button>
+            <button type="button" class="calc-pill" data-fuel="electric">Електрокотел</button>
+            <button type="button" class="calc-pill" data-fuel="solid">Твердопаливний</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-result">
+        <div class="calc-res-head">
+          <span>Орієнтовний підбір</span>
+          <span class="calc-res-badge" id="calc-badge-summary">Будинок • 120 м²</span>
+        </div>
+
+        <div class="calc-metrics">
+          <div class="calc-metric">
+            <small>Потужність котла</small>
+            <b id="res-boiler">24 кВт (газ)</b>
+          </div>
+          <div class="calc-metric">
+            <small>Бойлер ГВП</small>
+            <b id="res-tank">120–150 л</b>
+          </div>
+          <div class="calc-metric">
+            <small>Контурів теплої підлоги</small>
+            <b id="res-loops">5–7 контурів</b>
+          </div>
+          <div class="calc-metric">
+            <small>Труби теплої підлоги</small>
+            <b id="res-pipe">~430 м.п.</b>
+          </div>
+        </div>
+
+        <p class="calc-note">* Розрахунок є попереднім (з урахуванням сучасного утеплення та гарячого водопостачання). Точну специфікацію підготує наш інженер.</p>
+
+        <a class="btn btn-green-bordered btn-full" href="index.html#zvyazok">
+          <span>Отримати точний розрахунок у менеджера</span>
+          <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 2. КАЛЬКУЛЯТОР ЕКОНОМІЇ ГАЗУ З ПРОГРАМАТОРОМ ==================== -->
+<section class="sec sec-alt" id="ekonomiya-gazu">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Економія на опаленні 15–25%</span>
+      <h2>Скільки газу економить кімнатний програматор для котла?</h2>
+      <p class="lead">Кожен зайвий 1 °C у кімнаті понад комфортні 20–21 °C збільшує витрату газу на 5–6%. Тижневий або Wi-Fi термостат автоматично знижує температуру вночі та коли вас немає вдома.</p>
+    </div>
+
+    <div class="prog-card">
+      <div>
+        <strong style="font-size:0.95rem; color:#181a15;">Оберіть площу вашого житла для розрахунку за опалювальний сезон (6 міс.):</strong>
+        <div class="prog-area-pills" id="prog-area-pills">
+          <button type="button" class="prog-pill" data-area="60">~60 м²</button>
+          <button type="button" class="prog-pill active" data-area="110">~110 м²</button>
+          <button type="button" class="prog-pill" data-area="160">~160 м²</button>
+          <button type="button" class="prog-pill" data-area="220">220+ м²</button>
+        </div>
+
+        <ul class="prog-how-list">
+          <li>
+            <b>Розумний графік «День / Ніч»</b>
+            З 08:30 до 17:00, поки всі на роботі чи в школі, котел підтримує в домі 18 °C, а за годину до вашого повернення прогріває кімнати до комфортних 21,5 °C. Вночі для здорового сну знижує до 19 °C.
+          </li>
+          <li>
+            <b>Точність до 0,1 °C без перегріву кімнат</b>
+            Термостат вимірює реальну температуру повітря в кімнаті, а не води в трубі. Якщо вдень сонце прогріло кімнату через вікна — котел не вмикається даремно.
+          </li>
+          <li>
+            <b>Менше тактування — довший ресурс котла</b>
+            Котел вмикається рідше, але працює рівномірно. Це береже газовий клапан, триходовий клапан, насос і теплообмінник від передчасного зносу.
+          </li>
+        </ul>
+      </div>
+
+      <div class="prog-res-panel">
+        <div>
+          <div class="prog-kpi-grid">
+            <div class="prog-kpi kpi-big">
+              <small>Чиста економія за 1 опалювальний сезон (6 місяців):</small>
+              <strong id="prog-save-uah">+3 340 грн / сезон</strong>
+            </div>
+            <div class="prog-kpi">
+              <small>Економія газу за сезон:</small>
+              <strong id="prog-save-m3">~420 м³ газу</strong>
+            </div>
+            <div class="prog-kpi">
+              <small>Окупність програматора:</small>
+              <strong id="prog-payback">за 1 сезон</strong>
+            </div>
+          </div>
+
+          <p style="font-size:0.84rem; color:rgba(255,255,255,0.75); line-height:1.5; margin:16px 0 0;">
+            Розрахунок виконано для побутового тарифу <b>7,96 грн/м³</b> при середній економії <b>20%</b>. В наявності провідні, бездротові та Wi-Fi програматори (<i>Salus, Computherm, Auraton, Vaillant</i>).
+          </p>
+        </div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <a class="btn btn-green-bordered" style="flex:1 1 200px;" href="index.html#zvyazok">Підібрати програматор під мій котел</a>
+          <a class="btn btn-green-bordered" href="tel:+380984782637">098 478 26 37</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 3. ОБОВ'ЯЗКОВИЙ ЗАХИСТ КОТЛА ==================== -->
+<section class="sec" id="zahyst-kotla">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Безпека та довговічність обладнання</span>
+      <h2>Обов'язковий захист газового котла: стабілізатор та газосигналізатор</h2>
+      <p class="lead">Сучасний котел має чутливу електроніку та працює з газом. Два недорогі прилади захищають вас від дорогого ремонту плати та небезпечних ситуацій у котельні.</p>
+    </div>
+
+    <div class="safety-grid">
+      <!-- Картка 1: Стабілізатор напруги -->
+      <div class="safety-card">
+        <div>
+          <span class="safety-badge">Захист електроніки котла</span>
+          <h3>1. Стабілізатор напруги для котла</h3>
+          <p>В українських електромережах напруга нерідко просідає до 170 В або різко підстрибує до 255–265 В. Плата керування котла першою приймає удар від перепадів напруги.</p>
+          <ul class="safety-points">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m4 12.5 5 5L20 6.5"/></svg>
+              <span><b>Миттєва стабілізація 220 В:</b> захищає плату керування, циркуляційний насос та вентилятор турбіни від вигоряння.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m4 12.5 5 5L20 6.5"/></svg>
+              <span><b>Правильна синусоїда та наскрізний нуль:</b> підбираємо моделі (<i>LogicPower, Luxeon, Елекс, Volter</i>), з якими фазозалежні котли чітко бачать полум'я.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="safety-alert">
+          <b>Ціна питання:</b> Заміна згорілої плати сучасного котла коштує <b>5 000 – 12 000 грн</b> (плюс очікування запчастини взимку), тоді як якісний стабілізатор коштує в рази дешевше.
+        </div>
+      </div>
+
+      <!-- Картка 2: Газосигналізатор -->
+      <div class="safety-card">
+        <div>
+          <span class="safety-badge">Захист життя та безпеки сім'ї</span>
+          <h3>2. Газосигналізатор + відсікаючий клапан</h3>
+          <p>Невеликий прилад на стіні в котельні або на кухні цілодобово контролює чистоту повітря та реагує на найменшу небезпеку ще до того, як її відчує людина.</p>
+          <ul class="safety-points">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m4 12.5 5 5L20 6.5"/></svg>
+              <span><b>Подвійний контроль (Метан + Чадний газ CO):</b> фіксує як витік природного газу зі з'єднань, так і смертельно небезпечний чадний газ без запаху при порушенні тяги.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m4 12.5 5 5L20 6.5"/></svg>
+              <span><b>Автоматичне перекриття труби:</b> при тривозі вмикає сирену 85 дБ і подає імпульс на електромагнітний клапан, який миттєво перекриває подачу газу в будинок.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="safety-alert">
+          <b>Вимога газових служб:</b> Наявність газосигналізатора у приміщенні з газовим котлом — це обов'язкова норма ДБН та базовий спокій за безпеку вашої родини вночі.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 4. ГІД ПО ПОШИРЕНИХ КОДАХ ПОМИЛОК КОТЛІВ ==================== -->
+<section class="sec sec-alt" id="gid-pomylok">
+  <div class="wrap">
+    <div class="err-guide-box">
+      <div class="err-guide-head">
+        <div>
+          <span class="eyebrow">Швидка самодіагностика</span>
+          <h3>Гід по поширених кодах помилок котлів</h3>
+          <p>На екрані котла з'явився частий код помилки (відсутність розпалу, падіння тиску, перегрів чи тяга)? Оберіть марку котла або введіть код у пошук, щоб дізнатись причину та що перевірити до приїзду майстра.</p>
+        </div>
+        <div class="err-search-wrap">
+          <svg class="err-search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" class="err-search-inp" id="err-search-input" placeholder="Введіть код: F28, EA, E01, 501..." aria-label="Пошук поширеного коду помилки котла">
+        </div>
+      </div>
+
+      <div class="err-brands" id="err-brand-list" role="tablist"></div>
+      <div class="err-codes" id="err-code-list"></div>
+
+      <div class="err-result-card" id="err-result-card">
+        <div>
+          <span class="err-res-badge" id="err-res-badge">Vaillant • Код F.28</span>
+          <h4 class="err-res-title" id="err-res-title">Невдалий розпал пальника (немає полум'я)</h4>
+          <div class="err-res-steps">
+            <div class="err-step-row self-check">
+              <strong>Що можна перевірити самостійно:</strong>
+              <span id="err-res-self">Перевірте, чи відкритий газовий кран перед котлом та чи є газ на плиті. Якщо котел підключений через інвертор або подовжувач — переверніть вилку в розетці (можлива фазозалежність) і натисніть кнопку скидання (Reset / Перекреслене полум'я).</span>
+            </div>
+            <div class="err-step-row master-check">
+              <strong>Коли потрібен сервісний інженер:</strong>
+              <span id="err-res-master">Якщо після 2–3 спроб перезапуску помилка повертається — потрібна перевірка електрода розпалу/іонізації, газового клапана або плати керування.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="err-res-cta">
+          <b style="font-size:1.05rem;">Інший код або потрібна допомога?</b>
+          <p>У сервісній інструкції кожного котла десятки кодів. Якщо вашого коду немає у списку — сервісний центр розшифрує його по телефону або організує виїзд майстра.</p>
+          <a class="btn btn-green-bordered btn-full" href="tel:+380673504400">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+            <span>Сервіс • Оксана: 067 350 44 00</span>
+          </a>
+          <a class="btn btn-green-bordered btn-full" href="index.html#zvyazok">Написати сервісу</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ==================== ПІДВАЛ САЙТУ ==================== -->
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <a class="brand-logo" href="index.html">
+        <svg viewBox="0 0 120 100" aria-hidden="true">
+          <path d="M90 19 A39 39 0 1 0 90 81" fill="none" stroke="#ffffff" stroke-width="13.5"/>
+          <path d="M90 19 A39 39 0 0 1 90 81" fill="none" stroke="#85C240" stroke-width="13.5"/>
+          <line x1="9" y1="50" x2="62" y2="50" stroke="#ffffff" stroke-width="13.5" stroke-linecap="round"/>
+          <circle cx="64" cy="50" r="11.5" fill="#ffffff"/>
+        </svg>
+        <div class="brand-name">
+          <strong>ЄВРОТЕРМ</strong>
+          <span>Тернопіль</span>
+        </div>
+      </a>
+      <p style="margin-top:14px;max-width:34ch;font-size:0.9rem;">Торгово-монтажна інженерна організація з 1999 року: обладнання для опалення, водопостачання, водоочистки та монтаж під ключ у Тернополі та області.</p>
+    </div>
+
+    <div>
+      <h3>Розділи сайту</h3>
+      <ul>
+        <li><a href="index.html">Головна сторінка</a></li>
+        <li><a href="katalog.html">Каталог Сервіс</a></li>
+        <li><a href="montazh.html">Монтаж опалення</a></li>
+        <li><a href="vodoochystka.html">Монтаж Водоочистки</a></li>
+        <li><a href="korysna-informatsiya.html">Корисна інформація</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>На цій сторінці</h3>
+      <ul>
+        <li><a href="#kalkulyator">Онлайн-калькулятор</a></li>
+        <li><a href="#ekonomiya-gazu">Економія газу (Програматор)</a></li>
+        <li><a href="#zahyst-kotla">Стабілізатор і газосигналізатор</a></li>
+        <li><a href="#gid-pomylok">Поширені помилки котлів</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Контакти</h3>
+      <ul class="ci">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+          <div class="foot-ph"><small>Менеджер опалення Максим</small><a href="tel:+380984782637"><b>098 478 26 37</b></a></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+          <div class="foot-ph"><small>Сервіс опалення • Оксана</small><a href="tel:+380673504400"><b>067 350 44 00</b></a></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+          <div class="foot-ph"><small>Монтаж / Інженер • Володимир</small><a href="tel:+380674713402"><b>067 471 34 02</b></a></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+          <div class="foot-ph"><small>Водоочистка • Іван</small><a href="tel:+380969689103"><b>096 968 91 03</b></a></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <span>вулиця Об'їзна, 19, Великі Гаї, Тернопільська область, 47722</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-main" href="katalog.html">Каталог Сервіс</a>
+  <a class="btn btn-main" href="#gid-pomylok">Помилки котлів</a>
+  <a class="btn btn-ghost" href="tel:+380673504400" aria-label="Подзвонити у сервіс • Оксана">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+  </a>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. КАЛЬКУЛЯТОР ПІДБОРУ ОПАЛЕННЯ
+  const areaInput = document.getElementById('calc-area');
+  const areaDisplay = document.getElementById('calc-area-display');
+  const badgeSummary = document.getElementById('calc-badge-summary');
+  const resBoiler = document.getElementById('res-boiler');
+  const resTank = document.getElementById('res-tank');
+  const resLoops = document.getElementById('res-loops');
+  const resPipe = document.getElementById('res-pipe');
+
+  let heatState = { area: 120, type: 'house', fuel: 'gas' };
+
+  function recalcHeating() {
+    if (!areaInput) return;
+    const area = parseInt(areaInput.value, 10);
+    heatState.area = area;
+    areaDisplay.textContent = `${area} м²`;
+
+    const pct = ((area - 40) / (350 - 40)) * 100;
+    areaInput.style.background = `linear-gradient(90deg, #85C240 ${pct}%, #e5e8df ${pct}%)`;
+
+    const coef = heatState.type === 'house' ? 0.11 : 0.095;
+    const rawKw = Math.ceil(area * coef);
+    let boilerText = '';
+    if (heatState.fuel === 'gas') {
+      const recKw = rawKw <= 24 ? 24 : rawKw <= 28 ? 28 : rawKw <= 35 ? 35 : 40;
+      boilerText = `${recKw} кВт (газ)`;
+    } else if (heatState.fuel === 'electric') {
+      const recKw = Math.max(6, Math.ceil(rawKw / 2) * 2);
+      boilerText = `${recKw} кВт (електро)`;
+    } else {
+      const recKw = Math.max(15, Math.ceil((rawKw * 1.15) / 5) * 5);
+      boilerText = `${recKw} кВт (твердопал.)`;
+    }
+
+    const tankText = area <= 85 ? '80–100 л' : area <= 150 ? '120–150 л' : area <= 240 ? '200 л' : '250–300 л';
+    const floorShare = heatState.type === 'house' ? 0.65 : 0.45;
+    const warmArea = Math.round(area * floorShare);
+    const loopsMin = Math.max(2, Math.floor(warmArea / 15));
+    const loopsMax = loopsMin + 2;
+    const pipeMeters = Math.round((warmArea * 5.5) / 10) * 10;
+
+    resBoiler.textContent = boilerText;
+    resTank.textContent = tankText;
+    resLoops.textContent = `${loopsMin}–${loopsMax} контурів`;
+    resPipe.textContent = `~${pipeMeters} м.п.`;
+
+    const typeLabel = heatState.type === 'house' ? 'Будинок' : 'Квартира';
+    badgeSummary.textContent = `${typeLabel} • ${area} м²`;
+  }
+
+  document.querySelectorAll('#calc-type-pills .calc-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#calc-type-pills .calc-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      heatState.type = btn.dataset.type;
+      recalcHeating();
+    });
+  });
+
+  document.querySelectorAll('#calc-fuel-pills .calc-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#calc-fuel-pills .calc-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      heatState.fuel = btn.dataset.fuel;
+      recalcHeating();
+    });
+  });
+
+  if (areaInput) {
+    areaInput.addEventListener('input', recalcHeating);
+    recalcHeating();
+  }
+
+  // 2. КАЛЬКУЛЯТОР ЕКОНОМІЇ ГАЗУ З ПРОГРАМАТОРОМ
+  const progPills = document.querySelectorAll('#prog-area-pills .prog-pill');
+  const progSaveUah = document.getElementById('prog-save-uah');
+  const progSaveM3 = document.getElementById('prog-save-m3');
+  const progPayback = document.getElementById('prog-payback');
+
+  const PROG_DATA = {
+    60:  { m3: 240, uah: '1 910', payback: '~1 сезон' },
+    110: { m3: 420, uah: '3 340', payback: 'за 4–5 міс.' },
+    160: { m3: 600, uah: '4 780', payback: 'за 3–4 міс.' },
+    220: { m3: 820, uah: '6 530', payback: 'за 2–3 міс.' }
+  };
+
+  progPills.forEach(btn => {
+    btn.addEventListener('click', () => {
+      progPills.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const d = PROG_DATA[btn.dataset.area] || PROG_DATA[110];
+      progSaveUah.textContent = `+${d.uah} грн / сезон`;
+      progSaveM3.textContent = `~${d.m3} м³ газу`;
+      progPayback.textContent = d.payback;
+    });
+  });
+
+  // 3. ГІД ПО ПОШИРЕНИХ КОДАХ ПОМИЛОК КОТЛІВ
+  const BOILER_ERRORS = {
+    'Vaillant': [
+      {
+        code: 'F.22',
+        title: 'Низький тиск теплоносія (сухий хід)',
+        self: 'Подивіться на манометр котла — показник нижче 0.8 бар. Відкрийте кран підживлення знизу котла, доведіть тиск до 1.2–1.5 бар і щільно закрийте кран.',
+        master: 'Якщо тиск швидко падає знову — є витік у системі або вийшов з ладу розширювальний бак / датчик тиску.'
+      },
+      {
+        code: 'F.28',
+        title: 'Невдалий розпал пальника (немає полум\'я)',
+        self: 'Перевірте, чи відкритий газовий кран і чи є газ на плиті. Якщо котел живиться від інвертора — переверніть вилку в розетці (котел фазозалежний) та натисніть кнопку скидання (Reset).',
+        master: 'Потрібна чистка електродів розпалу/іонізації, перевірка газового клапана або плати керування.'
+      },
+      {
+        code: 'F.29',
+        title: 'Згасання полум\'я під час роботи',
+        self: 'Перевірте стабільність тиску газу та відсутність зворотної тяги у димоході при сильному вітрі. Спробуйте перезапустити котел кнопкою скидання.',
+        master: 'Необхідна перевірка електрода контролю полум\'я, газового клапана або системи димовидалення.'
+      },
+      {
+        code: 'F.75',
+        title: 'Датчик тиску не фіксує стрибок при запуску насоса',
+        self: 'Перевірте тиск у системі (має бути не менше 1.2 бар) та перезавантажте котел живленням.',
+        master: 'Типова причина — засмічення датчика тиску води або заклинювання циркуляційного насоса.'
+      }
+    ],
+    'Bosch / Buderus': [
+      {
+        code: 'EA',
+        title: 'Не виявлено струм іонізації (немає розпалу)',
+        self: 'Перевірте подачу газу та полярність підключення вилки в розетці (фаза/нуль). Натисніть і утримуйте кнопку Reset 3 секунди.',
+        master: 'Потрібна чистка електрода іонізації, налаштування газової арматури або перевірка плати.'
+      },
+      {
+        code: 'E9 / CE',
+        title: 'Перегрів теплообмінника або низький тиск води',
+        self: 'Перевірте тиск на манометрі (підживіть до 1.3 бар) та переконайтесь, що крани під котлом відкриті.',
+        master: 'Можливе заклинювання насоса, повітряна пробка або накип у первинному теплообміннику.'
+      },
+      {
+        code: 'C6',
+        title: 'Не замикається пресостат димоходу (вентилятор)',
+        self: 'У сильний мороз перевірте коаксіальну трубу на вулиці — на виході могла утворитися крижана бурулька.',
+        master: 'Потрібна перевірка вентилятора турбіни, трубок Вентурі або пневмореле.'
+      }
+    ],
+    'Protherm': [
+      {
+        code: 'F28 / F29',
+        title: 'Немає розпалу або втрата полум\'я (Пантера / Гепард)',
+        self: 'Перевірте газовий кран, напругу в мережі та натисніть кнопку Reset на панелі котла.',
+        master: 'Діагностика газового клапана, електрода розпалу або трансформатора.'
+      },
+      {
+        code: 'F22',
+        title: 'Недостатній тиск води в системі опалення',
+        self: 'Відкрийте кран підживлення під котлом, заповніть систему до 1.3–1.5 бар і закрийте вентиль.',
+        master: 'Перевірка розширювального бака та датчика тиску теплоносія.'
+      },
+      {
+        code: 'F20',
+        title: 'Спрацював аварійний термостат перегріву',
+        self: 'Дайте котлу охолонути 15–20 хвилин, перевірте відкриття вентилів на радіаторах і тиск води, після чого натисніть Reset.',
+        master: 'Причина може бути у заклиненому насосі, забитому фільтрі-грязьовику або триходовому клапані.'
+      }
+    ],
+    'Baxi': [
+      {
+        code: 'E01',
+        title: 'Блокування через відсутність запалювання пальника',
+        self: 'Перевірте наявність газу та правильність фазування вилки в розетці. Утримуйте кнопку R (Reset) 2–3 секунди.',
+        master: 'Чистка електрода іонізації, перевірка газового клапана або електронної плати.'
+      },
+      {
+        code: 'E10',
+        title: 'Немає сигналу від реле мінімального тиску води',
+        self: 'Подивіться на манометр — якщо тиск нижче 0.8 бар, підживіть систему водою до 1.2–1.5 бар.',
+        master: 'Заміна або чистка реле тиску води, перевірка підкачки розширювального бака.'
+      },
+      {
+        code: 'E03',
+        title: 'Несправність тяги / пресостата димовидалення',
+        self: 'Перевірте, чи не обмерзла коаксіальна труба ззовні будинку та чи не забитий димохід.',
+        master: 'Діагностика пресостата диму, вентилятора або конденсату в силіконових трубках.'
+      }
+    ],
+    'Ariston': [
+      {
+        code: '501',
+        title: 'Відсутність полум\'я при розпалі пальника',
+        self: 'Перевірте газовий кран, наявність стабілізатора напруги та натисніть кнопку Reset.',
+        master: 'Потрібна чистка електродів розпалу/іонізації або налаштування газового клапана.'
+      },
+      {
+        code: '108',
+        title: 'Недостатній тиск у контурі опалення (потрібне підживлення)',
+        self: 'Відкрийте кран підживлення знизу котла, підніміть тиск до 1.2–1.5 бар і закрийте кран.',
+        master: 'Якщо помилка з\'являється щотижня — потрібне підкачування розширювального бака або пошук витоку.'
+      },
+      {
+        code: '607',
+        title: 'Контакти пресостата димовидалення замкнуті до старту',
+        self: 'Перезавантажте котел (вимкніть з розетки на 1 хвилину та увімкніть знову).',
+        master: 'Залипання контактів пневмореле диму або несправність плати керування.'
+      }
+    ],
+    'Viessmann': [
+      {
+        code: 'F4',
+        title: 'Немає сигналу наявності полум\'я (помилка розпалу)',
+        self: 'Перевірте подачу газу, фазування в розетці та натисніть кнопку R (Reset).',
+        master: 'Перевірка електрода іонізації, блоку розпалу та газової арматури.'
+      },
+      {
+        code: 'F2',
+        title: 'Спрацював обмежувач температури (перегрів)',
+        self: 'Перевірте тиск у системі (1.3 бар) та чи не перекриті крани на контурах опалення.',
+        master: 'Можливе заклинювання циркуляційного насоса або засмічення фільтра зворотної лінії.'
+      }
+    ],
+    'Immergas': [
+      {
+        code: '01',
+        title: 'Блокування запалювання (немає розпалу)',
+        self: 'Перевірте газовий кран, правильне положення вилки в розетці та натисніть Reset.',
+        master: 'Чистка електрода контролю полум\'я, перевірка газового клапана або плати.'
+      },
+      {
+        code: '10',
+        title: 'Недостатній тиск теплоносія в системі',
+        self: 'Відкрийте кран підживлення та доведіть тиск по манометру до 1.2–1.4 бар.',
+        master: 'Діагностика реле тиску води та розширювального бака.'
+      },
+      {
+        code: '11',
+        title: 'Несправність реле тиску диму (вентилятора)',
+        self: 'Перевірте зовнішній димохід на відсутність льоду або сторонніх предметів.',
+        master: 'Перевірка вентилятора, трубок пресостата або датчика тяги.'
+      }
+    ]
+  };
+
+  const brandListEl = document.getElementById('err-brand-list');
+  const codeListEl = document.getElementById('err-code-list');
+  const searchInpEl = document.getElementById('err-search-input');
+  const resBadgeEl = document.getElementById('err-res-badge');
+  const resTitleEl = document.getElementById('err-res-title');
+  const resSelfEl = document.getElementById('err-res-self');
+  const resMasterEl = document.getElementById('err-res-master');
+
+  let currentBrand = 'Vaillant';
+  let currentErrObj = BOILER_ERRORS['Vaillant'][1];
+
+  function renderErrDetail(brand, errObj) {
+    currentBrand = brand;
+    currentErrObj = errObj;
+    resBadgeEl.textContent = `${brand} • Код ${errObj.code}`;
+    resTitleEl.textContent = errObj.title;
+    resSelfEl.textContent = errObj.self;
+    resMasterEl.textContent = errObj.master;
+  }
+
+  function renderBrands() {
+    if (!brandListEl) return;
+    brandListEl.innerHTML = '';
+    Object.keys(BOILER_ERRORS).forEach(brand => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'err-brand-btn' + (brand === currentBrand ? ' active' : '');
+      btn.textContent = brand;
+      btn.addEventListener('click', () => {
+        if (searchInpEl) searchInpEl.value = '';
+        currentBrand = brand;
+        renderBrands();
+        renderCodes(brand);
+        renderErrDetail(brand, BOILER_ERRORS[brand][0]);
+      });
+      brandListEl.appendChild(btn);
+    });
+  }
+
+  function renderCodes(brand) {
+    if (!codeListEl) return;
+    codeListEl.innerHTML = '';
+    const list = BOILER_ERRORS[brand] || [];
+    list.forEach(item => {
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'err-code-chip' + (currentErrObj && currentErrObj.code === item.code ? ' active' : '');
+      chip.textContent = item.code;
+      chip.addEventListener('click', () => {
+        renderErrDetail(brand, item);
+        renderCodes(brand);
+      });
+      codeListEl.appendChild(chip);
+    });
+  }
+
+  if (brandListEl && codeListEl) {
+    renderBrands();
+    renderCodes(currentBrand);
+    renderErrDetail(currentBrand, currentErrObj);
+  }
+
+  if (searchInpEl) {
+    searchInpEl.addEventListener('input', () => {
+      const q = searchInpEl.value.trim().toLowerCase().replace('.', '');
+      if (!q) {
+        renderBrands();
+        renderCodes(currentBrand);
+        return;
+      }
+      for (const [brand, items] of Object.entries(BOILER_ERRORS)) {
+        const found = items.find(it =>
+          it.code.toLowerCase().replace('.', '').includes(q) ||
+          it.title.toLowerCase().includes(q)
+        );
+        if (found) {
+          currentBrand = brand;
+          renderBrands();
+          renderErrDetail(brand, found);
+          renderCodes(brand);
+          break;
+        }
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>

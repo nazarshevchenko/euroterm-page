@@ -1,0 +1,2005 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Монтаж водоочистки та таблетована сіль Parla у Тернополі | Євротерм-Тернопіль</title>
+<meta name="description" content="Системи очистки води, зворотній осмос, колони пом'якшення, аналіз води та таблетована сіль Parla (Туреччина) від офіційного дистриб'ютора Євротерм-Тернопіль. Спеціаліст Іван: 096 968 91 03">
+<meta name="theme-color" content="#85C240">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 100'%3E%3Cpath d='M92 20 A40 40 0 1 0 92 80' fill='none' stroke='%23232321' stroke-width='14' stroke-linecap='butt'/%3E%3Cpath d='M92 20 A40 40 0 0 1 92 80' fill='none' stroke='%2385C240' stroke-width='14' stroke-linecap='butt'/%3E%3Cline x1='10' y1='50' x2='62' y2='50' stroke='%232321' stroke-width='14' stroke-linecap='round'/%3E%3Ccircle cx='64' cy='50' r='12' fill='%232321'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<style>
+
+  /* ==================== КАРТКА PARLA ==================== */
+  .parla-card {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: clamp(22px, 3.5vw, 40px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: clamp(24px, 4vw, 44px);
+    align-items: start;
+  }
+  .parla-brand-col {
+    background: linear-gradient(155deg, #f3f9fd 0%, #e6f2fa 100%);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 26px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .parla-badge-dist {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #181a15;
+    color: #ffffff;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+  .parla-badge-dist i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: inline-block;
+  }
+  .parla-logo-box {
+    width: 100%;
+    max-width: 230px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px 16px;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    border: 1px solid var(--line);
+  }
+  .parla-specs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    text-align: left;
+  }
+  .parla-spec-item {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 9px 11px;
+    border: 1px solid var(--line);
+  }
+  .parla-spec-item small {
+    display: block;
+    font-size: 0.72rem;
+    color: #536778;
+    line-height: 1.2;
+  }
+  .parla-spec-item b {
+    display: block;
+    font-size: 0.9rem;
+    color: #181a15;
+    margin-top: 2px;
+  }
+  .parla-deals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .parla-deal {
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .parla-deal-ico {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #181a15;
+    border: 1px solid var(--line);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: 800;
+    font-size: 0.85rem;
+  }
+  .parla-deal b {
+    display: block;
+    font-size: 0.98rem;
+    color: #181a15;
+    line-height: 1.25;
+  }
+  .parla-deal span {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 3px;
+    line-height: 1.35;
+  }
+  .parla-blog {
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+    margin-top: 18px;
+  }
+  .parla-blog h3 {
+    font-size: 1.08rem;
+    margin-bottom: 10px;
+    color: #181a15;
+  }
+  .parla-blog p {
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  .parla-points {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+  }
+  .parla-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.88rem;
+    color: #232321;
+    line-height: 1.4;
+  }
+  .parla-points li svg {
+    width: 17px;
+    height: 17px;
+    color: var(--accent-dark);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ==================== ВІДПРАВИТИ ВОДУ НА АНАЛІЗ ==================== */
+  .water-test-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.12fr;
+    gap: 26px;
+    align-items: start;
+  }
+  .water-steps {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: clamp(22px, 3vw, 30px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .water-test-photo {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    border: 1px solid var(--line);
+    aspect-ratio: 16 / 9;
+  }
+  .water-test-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .water-steps h3,
+  .water-form-card h3 {
+    margin: 0 0 18px;
+    font-size: 1.2rem;
+    color: #181a15;
+  }
+  .w-step {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .w-step-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #181a15;
+    border: 1px solid var(--line);
+    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .w-step b {
+    display: block;
+    font-size: 0.96rem;
+    color: #181a15;
+    margin-bottom: 3px;
+  }
+  .w-step p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .w-note-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    color: #181a15;
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: 0.86rem;
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+  .w-note-box svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+  .water-form-card {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: clamp(22px, 3vw, 30px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .wt-store-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 13px 15px;
+    margin-bottom: 16px;
+  }
+  .wt-store-box svg {
+    width: 22px;
+    height: 22px;
+    color: #181a15;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .wt-store-box b {
+    display: block;
+    font-size: 0.94rem;
+    color: #181a15;
+    margin-bottom: 2px;
+  }
+  .wt-store-box small {
+    display: block;
+    font-size: 0.82rem;
+    color: #3a3e35;
+    line-height: 1.4;
+  }
+  .wt-source {
+    margin-bottom: 14px;
+  }
+  .wt-lbl {
+    display: block;
+    font-size: 0.86rem;
+    font-weight: 800;
+    color: #181a15;
+    margin-bottom: 8px;
+  }
+  .wt-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .wt-pill {
+    border: 1px solid var(--line);
+    background: #f8f9f6;
+    color: #181a15;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+  }
+  .wt-pill:hover {
+    transform: translateY(-2px);
+    background: #eef8e2;
+  }
+  .wt-pill.active {
+    background: var(--accent);
+    color: #181a15;
+    border: 1px solid var(--line);
+    font-weight: 800;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .wt-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  /* ==================== ДЕТЕКТОР ПРОБЛЕМ ВОДИ ==================== */
+  .water-diag-box {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: clamp(22px, 3.5vw, 38px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .symp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .symp-btn {
+    background: #f8f9f6;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 15px 16px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    transition: all 0.2s ease;
+  }
+  .symp-btn:hover {
+    background: #eef8e2;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .symp-btn.active {
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .symp-ico {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #181a15;
+    transition: all 0.2s ease;
+  }
+  .symp-btn.active .symp-ico {
+    background: var(--accent);
+    border-color: #181a15;
+  }
+  .symp-btn b {
+    display: block;
+    font-size: 0.94rem;
+    color: #181a15;
+    line-height: 1.3;
+    margin-bottom: 3px;
+  }
+  .symp-btn span {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.35;
+  }
+  .diag-result {
+    background: #181a15;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: clamp(20px, 3vw, 28px);
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 24px;
+    align-items: center;
+  }
+  .diag-badge {
+    display: inline-block;
+    background: rgba(133, 194, 64, 0.2);
+    color: var(--accent);
+    font-size: 0.76rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 5px 11px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+  .diag-result h3 {
+    font-size: 1.22rem;
+    margin: 0 0 10px;
+    color: #ffffff;
+  }
+  .diag-desc {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.78);
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+  .diag-chain {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  .diag-step-pill {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(133, 194, 64, 0.45);
+    color: #ffffff;
+    font-size: 0.84rem;
+    font-weight: 700;
+    padding: 7px 12px;
+    border-radius: 10px;
+  }
+  .diag-arrow {
+    color: var(--accent);
+    font-weight: 900;
+  }
+  .diag-cta-box {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* ==================== МІСТО VS СВЕРДЛОВИНА ==================== */
+  .source-tabs {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    background: #eef1ea;
+    padding: 6px;
+    border-radius: 16px;
+    margin-bottom: 22px;
+    border: 1px solid var(--line);
+  }
+  .source-tab {
+    padding: 11px 18px;
+    border-radius: 12px;
+    border: 1.5px solid transparent;
+    background: transparent;
+    color: var(--muted);
+    font-weight: 800;
+    font-size: 0.92rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .source-tab.active {
+    background: var(--accent);
+    color: #181a15;
+    border-color: #181a15;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .source-panel {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: clamp(22px, 3vw, 34px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .source-panel[hidden] {
+    display: none;
+  }
+  .source-list {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0;
+    display: grid;
+    gap: 12px;
+  }
+  .source-list li {
+    background: #f8f9f6;
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    padding: 12px 14px;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: #232321;
+  }
+  .source-list li b {
+    display: block;
+    color: #181a15;
+    margin-bottom: 2px;
+  }
+  .source-kit {
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .kit-steps {
+    display: grid;
+    gap: 9px;
+    margin: 10px 0;
+  }
+  .kit-step {
+    background: #ffffff;
+    border-radius: 11px;
+    padding: 10px 13px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #181a15;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--line);
+  }
+  .kit-step span {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #181a15;
+    border: 1px solid var(--line);
+    font-size: 0.78rem;
+    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  /* ==================== КАЛЬКУЛЯТОР ЕКОНОМІЇ ЗВОРОТНОГО ОСМОСУ ==================== */
+  .osmos-calc-card {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: clamp(22px, 3.5vw, 38px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(24px, 4vw, 42px);
+    align-items: stretch;
+  }
+  .osmos-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .osmos-group-lbl {
+    display: block;
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: #181a15;
+    margin-bottom: 10px;
+  }
+  .people-pills {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+  .ppl-btn {
+    padding: 11px 6px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: #f8f9f6;
+    font-weight: 800;
+    font-size: 0.92rem;
+    color: #181a15;
+    cursor: pointer;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    transition: all 0.18s ease;
+    text-align: center;
+  }
+  .ppl-btn:hover {
+    background: #eef8e2;
+    transform: translateY(-2px);
+  }
+  .ppl-btn.active {
+    background: var(--accent);
+    border: 1px solid var(--line);
+    color: #181a15;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .buy-type-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .buy-btn {
+    padding: 13px 14px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: #f8f9f6;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    transition: all 0.18s ease;
+  }
+  .buy-btn b {
+    display: block;
+    font-size: 0.92rem;
+    color: #181a15;
+    margin-bottom: 2px;
+  }
+  .buy-btn span {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  .buy-btn.active {
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .osmos-compare-mini {
+    background: #f8f9f6;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 15px 16px;
+    display: grid;
+    gap: 10px;
+  }
+  .oc-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.88rem;
+    color: #232321;
+  }
+  .oc-row b {
+    font-size: 0.96rem;
+    color: #181a15;
+  }
+  .oc-row.oc-highlight {
+    padding-top: 9px;
+    border-top: 1px dashed #181a15;
+    color: #181a15;
+    font-weight: 700;
+  }
+  .oc-row.oc-highlight b {
+    color: var(--accent-dark);
+    font-size: 1.04rem;
+  }
+  .osmos-summary-panel {
+    background: #181a15;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: clamp(20px, 3vw, 28px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+  }
+  .osmos-kpis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .osmos-kpi {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 15px;
+    padding: 14px 15px;
+  }
+  .osmos-kpi.kpi-main {
+    grid-column: 1 / -1;
+    background: rgba(133, 194, 64, 0.16);
+    border-color: rgba(133, 194, 64, 0.5);
+  }
+  .osmos-kpi small {
+    display: block;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.72);
+    margin-bottom: 4px;
+  }
+  .osmos-kpi strong {
+    display: block;
+    font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+    color: var(--accent);
+    line-height: 1.15;
+    font-weight: 900;
+  }
+  .osmos-kpi:not(.kpi-main) strong {
+    color: #ffffff;
+    font-size: 1.25rem;
+  }
+  .osmos-perks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.84);
+  }
+  .osmos-perks li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.4;
+  }
+  .osmos-perks li svg {
+    width: 16px;
+    height: 16px;
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ==================== ІНТЕРАКТИВНИЙ ВВІДНИЙ ВУЗОЛ (ФОТО + ТОЧКИ) ==================== */
+  .node-showcase {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: clamp(20px, 3vw, 36px);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: clamp(22px, 3.5vw, 40px);
+    align-items: start;
+  }
+  .node-photo-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #222422;
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .node-photo-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .node-pin {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #181a15;
+    color: #ffffff;
+    border: 2.5px solid var(--accent);
+    font-weight: 900;
+    font-size: 0.82rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.55);
+    transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
+    z-index: 2;
+  }
+  .node-pin::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 2px;
+    background: var(--accent);
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  .node-pin.pin-left::after {
+    left: 100%;
+  }
+  .node-pin.pin-right::after {
+    right: 100%;
+  }
+  .node-pin:hover,
+  .node-pin.active {
+    background: var(--accent);
+    color: #181a15;
+    border-color: #ffffff;
+    transform: translate(-50%, -50%) scale(1.18);
+    z-index: 3;
+  }
+  .node-photo-caption {
+    background: #181a15;
+    color: rgba(255,255,255,0.82);
+    font-size: 0.78rem;
+    padding: 9px 12px;
+    text-align: center;
+  }
+  .node-steps-list {
+    display: grid;
+    gap: 8px;
+  }
+  .node-step-item {
+    border: 1px solid var(--line);
+    background: #f8f9f6;
+    border-radius: 14px;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: all 0.18s ease;
+  }
+  .node-step-item:hover {
+    background: #eef8e2;
+  }
+  .node-step-item.active {
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .node-step-top {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+  .node-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: #181a15;
+    color: var(--accent);
+    font-weight: 900;
+    font-size: 0.84rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .node-step-item.active .node-num {
+    background: var(--accent);
+    color: #181a15;
+    border: 1px solid var(--line);
+  }
+  .node-step-top b {
+    font-size: 0.96rem;
+    color: #181a15;
+  }
+  .node-step-desc {
+    margin: 8px 0 0 39px;
+    font-size: 0.86rem;
+    color: #3a3e35;
+    line-height: 1.48;
+  }
+
+  /* ==================== КАРТКИ КАТАЛОГУ ТА ЧІПСИ ФОРМИ ==================== */
+  .cat-c {
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+  .chips .chip {
+    border: 1px solid var(--line);
+    background: #f8f9f6;
+    color: #181a15;
+    font-weight: 700;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+    transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+  }
+  .chips .chip:hover {
+    transform: translateY(-2px);
+    background: #eef8e2;
+  }
+  .chips .chip[aria-pressed="true"] {
+    background: var(--accent);
+    color: #181a15;
+    border: 1px solid var(--line);
+    font-weight: 800;
+    box-shadow: 0 10px 28px rgba(24,26,21,.08);
+  }
+
+  @media (max-width: 960px) {
+    .parla-card,
+    .node-showcase,
+    .diag-result,
+    .source-panel,
+    .osmos-calc-card,
+    .water-test-grid {
+      grid-template-columns: 1fr;
+    }
+    .parla-brand-col,
+    .node-photo-card {
+      max-width: 420px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .symp-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 620px) {
+    .parla-deals,
+    .parla-points,
+    .symp-grid,
+    .buy-type-grid,
+    .osmos-kpis,
+    .wt-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<!-- ==================== ШАПКА САЙТУ ==================== -->
+<header class="head">
+  <div class="wrap">
+    <a class="brand-logo" href="index.html" aria-label="Євротерм-Тернопіль, на головну">
+      <svg viewBox="0 0 120 100" aria-hidden="true">
+        <path d="M90 19 A39 39 0 1 0 90 81" fill="none" stroke="#232321" stroke-width="13.5" stroke-linecap="butt"/>
+        <path d="M90 19 A39 39 0 0 1 90 81" fill="none" stroke="#85C240" stroke-width="13.5" stroke-linecap="butt"/>
+        <line x1="9" y1="50" x2="62" y2="50" stroke="#232321" stroke-width="13.5" stroke-linecap="round"/>
+        <circle cx="64" cy="50" r="11.5" fill="#232321"/>
+      </svg>
+      <div class="brand-name">
+        <strong>ЄВРОТЕРМ</strong>
+        <span>Тернопіль</span>
+      </div>
+    </a>
+
+    <nav class="nav" aria-label="Основне меню">
+      <a href="index.html">Головна сторінка</a>
+      <a href="katalog.html">Каталог сервіс</a>
+      <a href="montazh.html">Монтаж опалення</a>
+      <a href="vodoochystka.html" class="active">Монтаж водоочистки</a>
+      <a href="korysna-informatsiya.html">Корисна інформація</a>
+    </nav>
+
+    <div class="head-r">
+      <div class="head-socs">
+        <a class="sb" href="https://www.instagram.com/euroterm.ternopil" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a class="sb" href="https://www.tiktok.com/@euroterm" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+        </a>
+        <a class="sb" href="https://www.facebook.com/EurotermTernopil" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+
+      <div class="tel-drop">
+        <a class="head-tel call-attention" href="tel:+380969689103" aria-label="Відділ водоочистки • Іван">
+          <svg class="icon phone-ring-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+          <span>096 968 91 03</span>
+        </a>
+      </div>
+
+      <a class="btn btn-green-bordered btn-sm head-cta" href="#analiz-vody">Аналіз води</a>
+      <button type="button" class="burger" id="burger-btn" aria-label="Меню" aria-expanded="false" aria-controls="mnav">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Мобільне меню -->
+<div class="mnav" id="mnav" hidden>
+  <div class="wrap mnav-in">
+    <nav class="mnav-l" aria-label="Мобільне меню">
+      <a href="index.html">Головна сторінка</a>
+      <a href="katalog.html">Каталог сервіс</a>
+      <a href="montazh.html">Монтаж опалення</a>
+      <a href="vodoochystka.html" class="active">Монтаж водоочистки</a>
+      <a href="korysna-informatsiya.html">Корисна інформація</a>
+      <a href="#analiz-vody">Відправити воду на аналіз</a>
+      <a href="#diagnostyka-vody">Діагностика води</a>
+      <a href="#osmos-ekonomiya">Калькулятор осмосу</a>
+      <a href="#vvidnyy-vuzol">Правильний ввід води</a>
+      <a href="#parla-salt">Таблетована сіль PARLA</a>
+      <a href="index.html#kontakty">Контакти</a>
+    </nav>
+
+    <div class="phones-list">
+      <a class="p-card" href="tel:+380969689103">
+        <div class="p-card-info"><span class="p-card-role">Відділ водоочистки • Іван</span><span class="p-card-num">096 968 91 03</span></div>
+        <span class="p-card-ico"><svg class="icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></span>
+      </a>
+    </div>
+
+    <div class="mnav-cta">
+      <a class="btn btn-green-bordered btn-full" href="#analiz-vody">Відправити воду на аналіз</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ==================== ПЕРШИЙ ЕКРАН ВОДООЧИСТКИ ==================== -->
+<section class="hero">
+  <div class="wrap hc">
+    <span class="eyebrow">Водопідготовка та очистка • Тернопіль</span>
+    <h1>Чиста та м'яка вода у вашому домі <span class="acc">під ключ</span></h1>
+    <p class="hero-lead">Підбираємо, встановлюємо та обслуговуємо системи очистки води для квартир, приватних будинків зі свердловинами та комерційних об'єктів. Офіційний дистриб'ютор таблетованої солі <b>PARLA (Туреччина)</b>.</p>
+    <div class="pb-go" style="justify-content: center;">
+      <a class="btn btn-green-bordered" href="#analiz-vody">Відправити воду на аналіз <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-green-bordered" href="#diagnostyka-vody">Діагностика за симптомами</a>
+      <a class="btn btn-green-bordered" href="#osmos-ekonomiya">Вигода осмосу</a>
+      <a class="btn btn-green-bordered" href="#vvidnyy-vuzol">Правильний ввід води</a>
+      <a class="btn btn-green-bordered" href="#parla-salt">Сіль PARLA</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <ul class="facts">
+      <li><b>Підбір за аналізом води</b><span>Точно розраховуємо завантаження колон під вашу свердловину</span></li>
+      <li><b>Монтаж під ключ</b><span>Правильний ввідний вузол, врізка, налаштування та запуск</span></li>
+      <li><b>Офіційний дистриб'ютор Parla</b><span>Турецька таблетована сіль від 10 мішків за гуртовою ціною</span></li>
+      <li><b>Доставка від 20 мішків</b><span>Безкоштовно привеземо сіль по Тернополю та околицях</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== ВІДПРАВИТИ ВОДУ НА АНАЛІЗ ==================== -->
+<section class="sec sec-alt" id="analiz-vody">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Лабораторний підбір • Точний розрахунок фільтрів</span>
+      <h2>Відправити воду на аналіз</h2>
+      <p class="lead">Хімічний аналіз води (жорсткість, залізо, марганець, сірководень, нітрати, pH) дозволяє підібрати систему очистки з першого разу — без переплат за зайві засипки.</p>
+    </div>
+
+    <div class="water-test-grid">
+      <!-- Ліва колонка: Фото та 3 кроки підготовки проби -->
+      <div class="water-steps">
+        <div class="water-test-photo">
+          <img src="img/analiz1.jpg" alt="Лабораторний аналіз води у колбі для точного підбору системи водоочистки">
+        </div>
+        <h3>Як правильно набрати пробу води:</h3>
+        <div class="w-step">
+          <span class="w-step-num">1</span>
+          <div>
+            <b>Візьміть чисту пластикову пляшку (1,5 л)</b>
+            <p>Підійде пляшка з-під звичайної негазованої питної води (не з-під соків, солодких напоїв чи пива). Ополосніть її водою, яку здаєте на аналіз.</p>
+          </div>
+        </div>
+        <div class="w-step">
+          <span class="w-step-num">2</span>
+          <div>
+            <b>Злийте воду 5–10 хвилин</b>
+            <p>Відкрийте кран і дайте воді стекти, щоб у пляшку потрапила свіжа вода безпосередньо зі свердловини, криниці чи водопроводу.</p>
+          </div>
+        </div>
+        <div class="w-step">
+          <span class="w-step-num">3</span>
+          <div>
+            <b>Наберіть «під горлечко» без повітря</b>
+            <p>Наливайте тонкою цівкою по стінці пляшки. Перед закручуванням злегка стисніть пляшку, щоб витіснити все повітря, і щільно закрийте кришку.</p>
+          </div>
+        </div>
+
+        <div class="w-note-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span>Доставте пробу в магазин протягом <b>24 годин</b> (до передачі зберігайте у темному прохолодному місці).</span>
+        </div>
+      </div>
+
+      <!-- Права колонка: Запис на здачу води в магазин -->
+      <div class="water-form-card">
+        <h3>Привезіть пробу води в наш магазин</h3>
+        <div class="wt-store-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <div>
+              <b>Прийом води: вул. Об'їзна, 19, Великі Гаї</b>
+              <small>Магазин «Євротерм-Тернопіль» (Пн–Сб). Попередьте спеціаліста Івана перед візитом або залиште номер — ми зв'яжемося після отримання результатів аналізу.</small>
+            </div>
+          </div>
+        <p class="msg-sub" style="margin-top:14px;">Напишіть спеціалісту Івану, коли плануєте привезти пробу, — він підготує приймання та підкаже, на що звернути увагу.</p>
+        <div class="msg-acts msg-acts-full">
+          <a class="msg-btn msg-tg" href="https://t.me/+380969689103?text=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D0%B7%D1%82%D0%B8%20%D0%BF%D1%80%D0%BE%D0%B1%D1%83%20%D0%B2%D0%BE%D0%B4%D0%B8%20%D0%BD%D0%B0%20%D0%B0%D0%BD%D0%B0%D0%BB%D1%96%D0%B7%20%D0%B2%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%20%28%D0%B2%D1%83%D0%BB.%20%D0%9E%D0%B1%27%D1%97%D0%B7%D0%BD%D0%B0%2C%2019%2C%20%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D1%96%20%D0%93%D0%B0%D1%97%29." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><span>Telegram</span></a>
+          <a class="msg-btn msg-vb" href="viber://chat?number=%2B380969689103"><svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6A8.4 8.4 0 0 1 12.5 3H13a8.5 8.5 0 0 1 8 8z"/></svg><span>Viber</span></a>
+          <a class="msg-btn msg-call" href="tel:+380969689103"><svg class="icon" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg><span>096 968 91 03</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ІНТЕРАКТИВНИЙ ДЕТЕКТОР ПРОБЛЕМ ВОДИ ==================== -->
+<section class="sec" id="diagnostyka-vody">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Швидка самодіагностика</span>
+      <h2>Визначте проблему води за симптомами</h2>
+      <p class="lead">Оберіть одну або кілька ознак, які ви помічаєте у своїй воді — система підкаже, що саме міститься у воді та яке обладнання вирішить проблему.</p>
+    </div>
+
+    <div class="water-diag-box">
+      <div class="symp-grid" id="symp-grid">
+        <button type="button" class="symp-btn active" data-id="scale">
+          <span class="symp-ico"><svg class="icon" style="width:18px;height:18px;" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></span>
+          <div>
+            <b>Білий накип у чайнику та наліт</b>
+            <span>Вапняні сліди на змішувачах, склі душової та тенах бойлера</span>
+          </div>
+        </button>
+
+        <button type="button" class="symp-btn" data-id="smell">
+          <span class="symp-ico"><svg class="icon" style="width:18px;height:18px;" viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg></span>
+          <div>
+            <b>Вода має неприємний запах</b>
+            <span>Запах сірководню («тухлих яєць») або болота зі свердловини</span>
+          </div>
+        </button>
+
+        <button type="button" class="symp-btn" data-id="iron">
+          <span class="symp-ico"><svg class="icon" style="width:18px;height:18px;" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l2 2"/></svg></span>
+          <div>
+            <b>Рудий осад та жовтий відтінок</b>
+            <span>Іржаві потьоки на сантехніці, металевий присмак води</span>
+          </div>
+        </button>
+
+        <button type="button" class="symp-btn" data-id="chlorine">
+          <span class="symp-ico"><svg class="icon" style="width:18px;height:18px;" viewBox="0 0 24 24"><path d="M10 2v7.31M14 9.3V1.99M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"/></svg></span>
+          <div>
+            <b>Запах хлору та сухість шкіри</b>
+            <span>Характерний присмак водопровідної води, стягує шкіру після душу</span>
+          </div>
+        </button>
+
+        <button type="button" class="symp-btn" data-id="sand">
+          <span class="symp-ico"><svg class="icon" style="width:18px;height:18px;" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span>
+          <div>
+            <b>Пісок або каламутність</b>
+            <span>Дрібні частинки після відключення води або зі свердловини</span>
+          </div>
+        </button>
+
+        <button type="button" class="symp-btn" data-id="drink">
+          <span class="symp-ico"><svg class="icon" style="width:18px;height:18px;" viewBox="0 0 24 24"><path d="m4 12.5 5 5L20 6.5"/></svg></span>
+          <div>
+            <b>Потрібна чиста питна вода</b>
+            <span>Безпечна вода для дітей, приготування їжі та кавомашини</span>
+          </div>
+        </button>
+      </div>
+
+      <div class="diag-result">
+        <div>
+          <span class="diag-badge" id="diag-badge">Причина: Підвищена жорсткість води</span>
+          <h3 id="diag-title">Солі кальцію та магнію утворюють накип</h3>
+          <p class="diag-desc" id="diag-desc">Для Тернополя та області це найпоширеніша проблема. Накип на тенах бойлера та теплообміннику котла збільшує витрату газу й електрики на 15–25% і виводить техніку з ладу. Рішення — колона пом'якшення води з іонообмінною смолою та таблетованою сіллю PARLA.</p>
+          <div class="diag-chain" id="diag-chain">
+            <span class="diag-step-pill">1. Фільтр механічної очистки</span>
+            <span class="diag-arrow">→</span>
+            <span class="diag-step-pill">2. Колона пом'якшення + сіль PARLA</span>
+            <span class="diag-arrow">→</span>
+            <span class="diag-step-pill">3. Зворотний осмос (на кухню)</span>
+          </div>
+        </div>
+
+        <div class="diag-cta-box">
+          <b style="font-size:1rem;">Не впевнені у складі води?</b>
+          <p style="margin:0; font-size:0.84rem; color:rgba(255,255,255,0.75); line-height:1.45;">Привезіть 1,5 л води у чистій пляшці в магазин (Великі Гаї, вул. Об'їзна, 19) або зателефонуйте інженеру.</p>
+          <a class="btn btn-green-bordered btn-full" href="tel:+380969689103">Водоочистка • Іван: 096 968 91 03</a>
+          <a class="btn btn-ghost btn-full" style="background:transparent; color:#fff; border-color:rgba(255,255,255,0.25);" href="https://t.me/+380969689103" id="diag-send-btn">Написати Івану в Telegram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== КАЛЬКУЛЯТОР ЕКОНОМІЇ ТА КОМФОРТУ ЗВОРОТНОГО ОСМОСУ ==================== -->
+<section class="sec sec-alt" id="osmos-ekonomiya">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Розрахунок вигоди для сім'ї</span>
+      <h2>Скільки грошей і сил економить домашній зворотний осмос?</h2>
+      <p class="lead">Порівняйте витрати на купівлю бутильованої чи розливної води з вартістю 1 літра чистої води з власного зворотного осмосу на кухні.</p>
+    </div>
+
+    <div class="osmos-calc-card">
+      <!-- Ліва колонка: Параметри сім'ї та порівняння ціни 1 л -->
+      <div class="osmos-controls">
+        <div>
+          <span class="osmos-group-lbl">1. Скільки людей проживає вдома?</span>
+          <div class="people-pills" id="osmos-people">
+            <button type="button" class="ppl-btn" data-ppl="1">1 особа</button>
+            <button type="button" class="ppl-btn" data-ppl="2">2 особи</button>
+            <button type="button" class="ppl-btn active" data-ppl="3">3 особи</button>
+            <button type="button" class="ppl-btn" data-ppl="4">4 особи</button>
+            <button type="button" class="ppl-btn" data-ppl="5">5+ осіб</button>
+          </div>
+        </div>
+
+        <div>
+          <span class="osmos-group-lbl">2. Як ви зараз купуєте питну воду?</span>
+          <div class="buy-type-grid" id="osmos-buy-type">
+            <button type="button" class="buy-btn active" data-price="2.5" data-mode="Водомат / розлив">
+              <b>Водомат або розлив</b>
+              <span>Середня ціна ~2,50 грн за 1 літр</span>
+            </button>
+            <button type="button" class="buy-btn" data-price="6.35" data-mode="Доставка бутлів 18,9 л">
+              <b>Доставка бутлів 18,9 л</b>
+              <span>~120 грн за бутель (~6,35 грн/л)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="osmos-compare-mini">
+          <div class="oc-row">
+            <span>Середня витрата чистої води (пиття, чай, кава, їжа):</span>
+            <b id="oc-liters">~300 л / міс (3 600 л / рік)</b>
+          </div>
+          <div class="oc-row">
+            <span>Витрати на купівлю води зараз:</span>
+            <b id="oc-spend-buy">~750 грн / міс (9 000 грн / рік)</b>
+          </div>
+          <div class="oc-row">
+            <span>Собівартість 1 л з домашнього осмосу (вода + змінні картриджі):</span>
+            <b>~0,60 грн / літр</b>
+          </div>
+          <div class="oc-row oc-highlight">
+            <span>Витрати на власний осмос (заміна картриджів):</span>
+            <b id="oc-spend-osmos">~180 грн / міс (~2 160 грн / рік)</b>
+          </div>
+        </div>
+      </div>
+
+      <!-- Права колонка: Результат економії та комфорту -->
+      <div class="osmos-summary-panel">
+        <div>
+          <div class="osmos-kpis">
+            <div class="osmos-kpi kpi-main">
+              <small>Ваша чиста економія на воді за 1 рік:</small>
+              <strong id="oc-save-year">+6 840 грн / рік</strong>
+            </div>
+            <div class="osmos-kpi">
+              <small>Вага бутлів, яку не треба носити:</small>
+              <strong id="oc-weight-year">3 600 кг / рік</strong>
+            </div>
+            <div class="osmos-kpi">
+              <small>Окупність системи осмосу:</small>
+              <strong id="oc-payback">~10 місяців</strong>
+            </div>
+          </div>
+
+          <ul class="osmos-perks" style="margin-top: 16px;">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m4 12.5 5 5L20 6.5"/></svg>
+              <span><b>Жодних важких баклажок і черг:</b> чиста вода тече з окремого крана на мийці 24/7 — у дощ, сніг чи вночі.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m4 12.5 5 5L20 6.5"/></svg>
+              <span><b>Завжди свіжа вода без застою у пластику:</b> фільтрується безпосередньо перед подачею у склянку чи чайник.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m4 12.5 5 5L20 6.5"/></svg>
+              <span><b>Без накипу в чайнику та кавомашині:</b> система з мінералізатором дає збалансовану за смаком воду для дітей і кави.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <a class="btn btn-green-bordered" style="flex: 1 1 200px;" href="https://t.me/+380969689103" id="osmos-order-btn">Замовити осмос під ключ</a>
+          <a class="btn btn-ghost" style="background: transparent; color: #fff; border-color: rgba(255,255,255,0.28);" href="tel:+380969689103">Іван: 096 968 91 03</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== МІСЬКА ВОДА VS СВЕРДЛОВИНА ==================== -->
+<section class="sec" id="dzherelo-vody">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Особливості води в регіоні</span>
+      <h2>Що міститься у воді: Квартира vs Приватний будинок</h2>
+      <p class="lead">Склад води в центральному міському водопроводі та у власній свердловині суттєво відрізняється, тому й схеми очищення підбираються по-різному.</p>
+    </div>
+
+    <div class="source-tabs" role="tablist">
+      <button type="button" class="source-tab active" data-src="city" role="tab" aria-selected="true">Центральне міське водопостачання (Квартира)</button>
+      <button type="button" class="source-tab" data-src="well" role="tab" aria-selected="false">Власна свердловина або колодязь (Будинок)</button>
+    </div>
+
+    <!-- Панель 1: Міська вода -->
+    <div class="source-panel" id="panel-src-city">
+      <div>
+        <h3 style="font-size:1.18rem; margin-bottom:6px;">Що зазвичай є у міській воді Тернополя:</h3>
+        <p style="font-size:0.9rem; color:var(--muted);">Вода проходить очистку на водоканалі, тому в ній немає сірководню чи великої кількості заліза, але є інші типові домішки:</p>
+        <ul class="source-list">
+          <li><b>Висока жорсткість (кальцій і магній)</b>Залишає білий наліт на змішувачах, душовій кабіні та утворює накип у бойлері й кавомашині.</li>
+          <li><b>Залишковий хлор та хлорорганіка</b>Використовуються для знезараження міських мереж; дають характерний запах та пересушують шкіру після душу.</li>
+          <li><b>Вторинне забруднення зі старих труб</b>Іржа, окалина та каламутність після ремонтних робіт або відключень водопостачання.</li>
+        </ul>
+      </div>
+
+      <div class="source-kit">
+        <div>
+          <span class="eyebrow">Оптимальна схема для квартири</span>
+          <h3 style="font-size:1.15rem; margin-top:4px;">Компактний захист сантехніки та питна вода</h3>
+          <div class="kit-steps">
+            <div class="kit-step"><span>1</span>Фільтр механічної очистки на вводі (захист від окалини та піску)</div>
+            <div class="kit-step"><span>2</span>Магістральний вугільний фільтр Big Blue (видалення хлору та запаху)</div>
+            <div class="kit-step"><span>3</span>Компактний пом'якшувач кабінетного типу (за потреби, від накипу)</div>
+            <div class="kit-step"><span>4</span>Система зворотного осмосу під мийку (ідеальна питна вода)</div>
+          </div>
+        </div>
+        <a class="btn btn-green-bordered btn-full" href="#zvyazok">Підібрати комплект для квартири</a>
+      </div>
+    </div>
+
+    <!-- Панель 2: Свердловина / Колодязь -->
+    <div class="source-panel" id="panel-src-well" hidden>
+      <div>
+        <h3 style="font-size:1.18rem; margin-bottom:6px;">Що зазвичай міститься у воді зі свердловини чи колодязя:</h3>
+        <p style="font-size:0.9rem; color:var(--muted);">Вода зі свердловини не містить хлору, але її хімічний склад залежить від водоносного горизонту у вашому районі:</p>
+        <ul class="source-list">
+          <li><b>Розчинене залізо та марганець</b>Зі свердловини вода може текти прозорою, але через 15 хвилин на повітрі жовтіє та залишає рудий осад.</li>
+          <li><b>Сірководень (неприємний запах)</b>Природний газ у глибоких свердловинах без доступу кисню; надає воді запаху «тухлих яєць».</li>
+          <li><b>Екстремальна жорсткість та нітрати</b>Солі жорсткості швидко руйнують теплообмінник котла, а нітрати (особливо у колодязях) не видаляються кип'ятінням.</li>
+        </ul>
+      </div>
+
+      <div class="source-kit">
+        <div>
+          <span class="eyebrow">Оптимальна схема для приватного будинку</span>
+          <h3 style="font-size:1.15rem; margin-top:4px;">Комплексна водопідготовка всього будинку</h3>
+          <div class="kit-steps">
+            <div class="kit-step"><span>1</span>Фільтр механічної очистки 100 мкм (затримує пісок зі свердловини)</div>
+            <div class="kit-step"><span>2</span>Колона комплексної очистки (залізо + жорсткість + сірководень) + сіль PARLA</div>
+            <div class="kit-step"><span>3</span>Вугільний постфільтр Big Blue 20 (фінішне полірування води)</div>
+            <div class="kit-step"><span>4</span>Зворотний осмос на кухню (повне очищення від нітратів та солей)</div>
+          </div>
+        </div>
+        <a class="btn btn-green-bordered btn-full" href="#zvyazok">Підібрати систему для будинку</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ПРАВИЛЬНИЙ ВВІДНИЙ ВУЗОЛ (ІНТЕРАКТИВНЕ ФОТО + 9 КРОКІВ) ==================== -->
+<section class="sec sec-alt" id="vvidnyy-vuzol">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Інженерний стандарт монтажу</span>
+      <h2>Правильна схема вводу води у квартиру чи будинок</h2>
+      <p class="lead">Надійна водоочистка починається ще до фільтрів. Натискайте на номери на фото або на пункти праворуч, щоб побачити, як кожен вузол захищає ваше житло від затоплення та гідроударів.</p>
+    </div>
+
+    <div class="node-showcase">
+      <!-- Ліва колонка: Фото ввідного вузла з пульсуючими маркерами -->
+      <div>
+        <div class="node-photo-card">
+          <img src="img/vuzol-vody.jpg" alt="Правильний ввідний вузол водопостачання з системою Ajax WaterStop, лічильником, редуктором тиску та компенсатором гідроударів">
+          <button type="button" class="node-pin pin-left active" data-step="1" style="top: 80%; left: 31%;" aria-label="1. Ввідний кульовий кран">1</button>
+          <button type="button" class="node-pin pin-right" data-step="2" style="top: 75%; left: 73%;" aria-label="2. Фільтр механічної очистки">2</button>
+          <button type="button" class="node-pin pin-right" data-step="3" style="top: 63%; left: 73%;" aria-label="3. Лічильник води">3</button>
+          <button type="button" class="node-pin pin-right" data-step="4" style="top: 48%; left: 68%;" aria-label="4. Зворотний клапан">4</button>
+          <button type="button" class="node-pin pin-left" data-step="5" style="top: 40%; left: 16%;" aria-label="5. Система автоматичного перекриття води Ajax">5</button>
+          <button type="button" class="node-pin pin-left" data-step="6" style="top: 28%; left: 22%;" aria-label="6. Манометр тиску на вході">6</button>
+          <button type="button" class="node-pin pin-right" data-step="7" style="top: 15%; left: 66%;" aria-label="7. Редуктор тиску з манометром">7</button>
+          <button type="button" class="node-pin pin-left" data-step="8" style="top: 5%; left: 21%;" aria-label="8. Компенсатор гідроудару">8</button>
+          <div class="node-photo-caption">Натисніть на цифру біля деталі, щоб переглянути її призначення</div>
+        </div>
+      </div>
+
+      <!-- Права колонка: Покроковий інженерний розбір 1 -> 9 -->
+      <div>
+        <div class="node-steps-list" id="node-steps-list">
+          <div class="node-step-item active" data-step="1">
+            <div class="node-step-top"><span class="node-num">1</span><b>Ввідний кульовий кран</b></div>
+            <p class="node-step-desc">Головний запірний елемент на вході магістралі. Дозволяє миттєво перекрити подачу води на всю квартиру чи будинок для обслуговування системи.</p>
+          </div>
+
+          <div class="node-step-item" data-step="2">
+            <div class="node-step-top"><span class="node-num">2</span><b>Фільтр механічної очистки (сітчастий)</b></div>
+            <p class="node-step-desc">Затримує великі механічні частинки — пісок, іржу та окалину зі стояка, захищаючи крильчатку лічильника від заклинювання та поломки.</p>
+          </div>
+
+          <div class="node-step-item" data-step="3">
+            <div class="node-step-top"><span class="node-num">3</span><b>Лічильник обліку води</b></div>
+            <p class="node-step-desc">Вузол точного обліку споживання води (встановлюється на вводі в квартиру або згідно з вимогами водоканалу під пломбування).</p>
+          </div>
+
+          <div class="node-step-item" data-step="4">
+            <div class="node-step-top"><span class="node-num">4</span><b>Зворотний клапан</b></div>
+            <p class="node-step-desc">Не дає воді повертатися назад у загальний стояк при падінні тиску в мережі та запобігає перетіканню гарячої води в холодну через змішувачі.</p>
+          </div>
+
+          <div class="node-step-item" data-step="5">
+            <div class="node-step-top"><span class="node-num">5</span><b>Система автоматичного перекриття води Ajax WaterStop</b></div>
+            <p class="node-step-desc">Надійний захист від затоплення: як тільки бездротовий датчик зафіксує вологу під пральною машиною, ванною чи мийкою, електропривід за 5 секунд перекриє воду і надішле сповіщення на телефон.</p>
+          </div>
+
+          <div class="node-step-item" data-step="6">
+            <div class="node-step-top"><span class="node-num">6</span><b>Манометр тиску на вході</b></div>
+            <p class="node-step-desc">Показує реальний вхідний тиск у магістралі до редуктора, щоб контролювати перепади тиску в міській мережі чи після насоса.</p>
+          </div>
+
+          <div class="node-step-item" data-step="7">
+            <div class="node-step-top"><span class="node-num">7</span><b>Редуктор тиску з манометром</b></div>
+            <p class="node-step-desc">Знижує та стабілізує тиск у системі житла на безпечному рівні (зазвичай 3–3,5 бар), захищаючи шланги змішувачів, бойлер та побутову техніку від розриву.</p>
+          </div>
+
+          <div class="node-step-item" data-step="8">
+            <div class="node-step-top"><span class="node-num">8</span><b>Компенсатор гідроудару</b></div>
+            <p class="node-step-desc">Гасить різкі стрибки тиску, що виникають при швидкому закритті кульових кранів або клапанів пральної машини — прибирає стукіт у трубах.</p>
+          </div>
+
+          <div class="node-step-item" data-step="9">
+            <div class="node-step-top"><span class="node-num">9</span><b>Фільтри та система водоочистки</b></div>
+            <p class="node-step-desc">Після повного захисту від потопу, піску та стрибків тиску вода подається на магістральні колби, колону пом'якшення / знезалізнення (із сіллю PARLA) та зворотний осмос.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 10px;">
+          <a class="btn btn-green-bordered" href="#zvyazok">Замовити монтаж ввідного вузла та фільтрів</a>
+          <a class="btn btn-green-bordered" href="tel:+380969689103">Консультація • Іван: 096 968 91 03</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== БЛОК-БЛОГ: ТАБЛЕТОВАНА СІЛЬ PARLA ==================== -->
+<section class="sec" id="parla-salt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Офіційний дистриб'ютор в регіоні</span>
+      <h2>Таблетована сіль для пом'якшення води PARLA (Туреччина)</h2>
+      <p class="lead">«Євротерм-Тернопіль» — офіційний дистриб'ютор бренду <b>PARLA</b>. Постачаємо оригінальну турецьку таблетовану сіль у мішках по 25 кг для побутових і промислових систем водоочистки.</p>
+    </div>
+
+    <div class="parla-card">
+      <!-- Ліва колонка: Логотип PARLA та характеристики -->
+      <div class="parla-brand-col">
+        <span class="parla-badge-dist"><i></i>Офіційний дистриб'ютор</span>
+
+        <div class="parla-logo-box" aria-label="Логотип PARLA Salt">
+          <svg viewBox="0 0 260 115" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+            <defs>
+              <linearGradient id="parlaWave" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#0a5fa8"/>
+                <stop offset="100%" stop-color="#22a6e0"/>
+              </linearGradient>
+            </defs>
+            <path d="M130 8 C130 8 117 23 117 31 C117 38.2 122.8 44 130 44 C137.2 44 143 38.2 143 31 C143 23 130 8 130 8 Z" fill="url(#parlaWave)"/>
+            <circle cx="126" cy="29" r="3" fill="#ffffff" opacity="0.75"/>
+            <text x="130" y="79" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="38" letter-spacing="4" fill="#0d3b66">PARLA</text>
+            <path d="M46 89 Q90 82 130 89 T214 89" fill="none" stroke="url(#parlaWave)" stroke-width="3.5" stroke-linecap="round"/>
+            <text x="130" y="106" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10.5" letter-spacing="2.2" fill="#2c699a">PURE WATER SALT • TÜRKİYE</text>
+          </svg>
+        </div>
+
+        <div class="parla-specs">
+          <div class="parla-spec-item">
+            <small>Походження</small>
+            <b>Туреччина 🇹🇷</b>
+          </div>
+          <div class="parla-spec-item">
+            <small>Чистота NaCl</small>
+            <b>≥ 99,7%</b>
+          </div>
+          <div class="parla-spec-item">
+            <small>Фасування</small>
+            <b>Мішок 25 кг</b>
+          </div>
+          <div class="parla-spec-item">
+            <small>Наявність</small>
+            <b>Склад Великі Гаї</b>
+          </div>
+        </div>
+
+        <a class="btn btn-green-bordered btn-full" href="https://t.me/+380969689103?text=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BC%D0%BE%D0%B2%D0%B8%D1%82%D0%B8%20%D1%82%D0%B0%D0%B1%D0%BB%D0%B5%D1%82%D0%BE%D0%B2%D0%B0%D0%BD%D1%83%20%D1%81%D1%96%D0%BB%D1%8C%20PARLA.%20%D0%9F%D1%96%D0%B4%D0%BA%D0%B0%D0%B6%D1%96%D1%82%D1%8C%20%D0%BD%D0%B0%D1%8F%D0%B2%D0%BD%D1%96%D1%81%D1%82%D1%8C%20%D1%82%D0%B0%20%D1%83%D0%BC%D0%BE%D0%B2%D0%B8%20%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B8." target="_blank" rel="noopener" id="order-parla-btn">Замовити сіль PARLA</a>
+      </div>
+
+      <!-- Права колонка: Умови гурту/доставки та міні-блог -->
+      <div>
+        <div class="parla-deals">
+          <div class="parla-deal">
+            <span class="parla-deal-ico">10+</span>
+            <div>
+              <b>Від 10 мішків — гуртова ціна</b>
+              <span>Вигідна спеціальна вартість при замовленні від 10 мішків (250 кг) для дому, котелень чи бізнесу.</span>
+            </div>
+          </div>
+          <div class="parla-deal">
+            <span class="parla-deal-ico">20+</span>
+            <div>
+              <b>Від 20 мішків — безкоштовна доставка</b>
+              <span>Привеземо замовлення від 20 мішків власним транспортом по Тернополю та околицях за 0 грн.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="parla-blog">
+          <h3>Чому для систем пом'якшення води варто обирати саме турецьку сіль PARLA?</h3>
+          <p>Якість таблетованої солі напряму впливає на ресурс іонообмінної смоли та безвідмовну роботу керуючого клапана вашої колони водоочистки. Дешева технічна сіль часто містить домішки глини, піску та нерозчинних солей, які з часом утворюють щільний «сольовий міст» на дні бака і виводять систему з ладу.</p>
+          <p><b>Таблетована сіль PARLA</b> виготовляється в Туреччині з високоочищеної харчової виварної сировини (вакуум-виварної солі категорії «Екстра» з вмістом хлориду натрію <b>не менше 99,7%</b>). Завдяки пресуванню під високим тиском кожна таблетка має правильну циліндричну форму зі скошеними краями та оптимальну щільність:</p>
+
+          <ul class="parla-points">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m4 12.5 5 5L20 6.5"/></svg>
+              <span><b>Без осаду в баку:</b> розчиняється на 100% без мулу, нальоту та злежування на дні сольового фідера.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m4 12.5 5 5L20 6.5"/></svg>
+              <span><b>Рівномірне «танення»:</b> таблетки не кришаться і не перетворюються на кашу під час регенерації.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m4 12.5 5 5L20 6.5"/></svg>
+              <span><b>Захист смоли та клапана:</b> подовжує термін служби засипки Ecomix / Dowex на роки.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m4 12.5 5 5L20 6.5"/></svg>
+              <span><b>Прямі поставки:</b> як офіційний дистриб'ютор PARLA, гарантуємо свіжу партію та чесну ціну без посередників.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== КАТАЛОГ ОБЛАДНАННЯ ДЛЯ ВОДООЧИСТКИ ==================== -->
+<section class="sec sec-alt" id="systemy">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Рішення для води</span>
+      <h2>Обладнання та матеріали для водоочистки</h2>
+      <p class="lead">Натисніть на потрібний тип фільтрації, щоб переглянути бренди в наявності, або зателефонуйте спеціалісту водоочистки Івану: <b>096 968 91 03</b>.</p>
+    </div>
+
+    <div class="cat-grid">
+      <!-- 1. Зворотній осмос -->
+      <div class="cat-c">
+        <div class="cat-ph"><img src="img/osmos.jpg" alt="Системи зворотнього осмосу"></div>
+        <div class="cat-t">
+          <h3>Питна вода (Осмос)</h3>
+          <div class="cat-sub">
+            <button type="button" class="sub-btn" data-key="filt_osm"><span>Системи зворотнього осмосу</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+          </div>
+          <p style="font-size:0.86rem; color:var(--muted); margin-bottom:14px;">Багатоступеневе очищення питної води під мийку з мінералізатором або помпою (Ecosoft, Filtrons).</p>
+          <div class="cat-cta">
+            <span class="cat-price-info">Підбір та монтаж • Іван<b>096 968 91 03</b></span>
+            <a class="btn btn-green-bordered btn-sm" href="tel:+380969689103">Подзвонити</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Колони комплексної очистки -->
+      <div class="cat-c">
+        <div class="cat-ph"><img src="img/vodoochustka1.webp" alt="Колони комплексної очистки та пом'якшення"></div>
+        <div class="cat-t">
+          <h3>Колони та пом'якшувачі</h3>
+          <div class="cat-sub">
+            <button type="button" class="sub-btn" data-key="filt_sys"><span>Системи очистки та пом'якшення</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+          </div>
+          <p style="font-size:0.86rem; color:var(--muted); margin-bottom:14px;">Видалення жорсткості (накипу), заліза, марганцю, сірководню та амонію для всього будинку.</p>
+          <div class="cat-cta">
+            <span class="cat-price-info">Підбір та монтаж • Іван<b>096 968 91 03</b></span>
+            <a class="btn btn-green-bordered btn-sm" href="tel:+380969689103">Подзвонити</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Магістральні колби -->
+      <div class="cat-c">
+        <div class="cat-ph"><img src="img/magistralni.jpg" alt="Магістральні фільтри та картриджі"></div>
+        <div class="cat-t">
+          <h3>Магістральні фільтри</h3>
+          <div class="cat-sub">
+            <button type="button" class="sub-btn" data-key="filt_kolb"><span>Колби та картриджі</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+          </div>
+          <p style="font-size:0.86rem; color:var(--muted); margin-bottom:14px;">Фільтри механічної очистки Big Blue, самопромивні фільтри Honeywell, редуктори та захист Ajax.</p>
+          <div class="cat-cta">
+            <span class="cat-price-info">В наявності • Іван<b>096 968 91 03</b></span>
+            <a class="btn btn-green-bordered btn-sm" href="tel:+380969689103">Подзвонити</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Таблетована сіль PARLA -->
+      <div class="cat-c">
+        <div class="cat-ph"><img src="img/parla.webp" alt="Таблетована сіль Parla для пом'якшення води"></div>
+        <div class="cat-t">
+          <h3>Таблетована сіль PARLA</h3>
+          <div class="cat-sub">
+            <button type="button" class="sub-btn" data-key="filt_sil"><span>Сіль Parla 25 кг (Туреччина)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+          </div>
+          <p style="font-size:0.86rem; color:var(--muted); margin-bottom:14px;">Офіційний дистриб'ютор. Від 10 мішків — гурт, від 20 мішків — безкоштовна доставка по Тернополю та околицях.</p>
+          <div class="cat-cta">
+            <span class="cat-price-info">Оформити партію<b>Від 1 мішка</b></span>
+            <a class="btn btn-green-bordered btn-sm" href="#zvyazok">Замовити</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== КОНТАКТИ ТА ЗАЯВКА НА ВОДООЧИСТКУ ТА СІЛЬ PARLA ==================== -->
+<section class="sec order-s" id="kontakty">
+  <div class="wrap order" id="zvyazok">
+    <div class="order-side">
+      <span class="eyebrow">Відділ водоочистки та солі PARLA</span>
+      <h2>Замовте сіль PARLA або підбір системи очистки</h2>
+      <p class="lead">Напишіть нам щодо таблетованої солі <b>PARLA (Туреччина)</b>, монтаж ввідного вузла чи підбір системи фільтрації води. Від <b>10 мішків діє гуртова ціна</b>, а від <b>20 мішків — безкоштовна доставка</b> по Тернополю та околицях.</p>
+
+            <div class="addr-box">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <div>
+          <b>Склад-магазин «Євротерм-Тернопіль»:</b>
+          <span>вулиця Об'їзна, 19, Великі Гаї, Тернопільська область</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="msg-card">
+      <h3>Напишіть спеціалісту Івану</h3>
+      <p class="msg-sub">Сіль PARLA, підбір фільтрів, монтаж ввідного вузла чи запис на аналіз води — напишіть в зручний месенджер.</p>
+      <div class="msg-topics"><span>Що вас цікавить? Натисніть — відкриється чат у Telegram з готовим повідомленням:</span><div class="chips"><a class="chip" href="https://t.me/+380969689103?text=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F%21%20%D0%A6%D1%96%D0%BA%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D1%81%D1%96%D0%BB%D1%8C%20PARLA%20%E2%80%94%20%D0%B2%D1%96%D0%B4%2010%20%D0%BC%D1%96%D1%88%D0%BA%D1%96%D0%B2%20%28%D0%B3%D1%83%D1%80%D1%82%D0%BE%D0%B2%D0%B0%20%D1%86%D1%96%D0%BD%D0%B0%29." target="_blank" rel="noopener">Сіль PARLA від 10 мішків</a><a class="chip" href="https://t.me/+380969689103?text=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F%21%20%D0%A6%D1%96%D0%BA%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D1%81%D1%96%D0%BB%D1%8C%20PARLA%20%E2%80%94%20%D0%B2%D1%96%D0%B4%2020%20%D0%BC%D1%96%D1%88%D0%BA%D1%96%D0%B2%20%28%D0%B1%D0%B5%D0%B7%D0%BA%D0%BE%D1%88%D1%82%D0%BE%D0%B2%D0%BD%D0%B0%20%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0%29." target="_blank" rel="noopener">Сіль PARLA від 20 мішків</a><a class="chip" href="https://t.me/+380969689103?text=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F%21%20%D0%A6%D1%96%D0%BA%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D1%81%D1%96%D0%BB%D1%8C%20PARLA%20%E2%80%94%20%D1%80%D0%BE%D0%B7%D0%B4%D1%80%D1%96%D0%B1%20%281%E2%80%939%20%D0%BC%D1%96%D1%88%D0%BA%D1%96%D0%B2%29." target="_blank" rel="noopener">Сіль PARLA роздріб</a><a class="chip" href="https://t.me/+380969689103?text=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F%21%20%D0%A6%D1%96%D0%BA%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%D0%BD%D0%B0%20%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0%20%D0%B2%D0%BE%D0%B4%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D0%B1%D1%83%D0%B4%D0%B8%D0%BD%D0%BA%D1%83." target="_blank" rel="noopener">Комплексна очистка для будинку</a><a class="chip" href="https://t.me/+380969689103?text=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F%21%20%D0%A6%D1%96%D0%BA%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0%20%D0%B7%D0%B2%D0%BE%D1%80%D0%BE%D1%82%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BE%D1%81%D0%BC%D0%BE%D1%81%D1%83." target="_blank" rel="noopener">Зворотний осмос</a></div></div>
+      <div class="msg-list">
+      <div class="msg-row">
+        <div class="msg-who">
+          <span class="msg-role">Водоочистка • Іван</span>
+          <a class="msg-phone" href="tel:+380969689103">096 968 91 03</a>
+          <a class="msg-mail" href="mailto:voda@euro-term.com.ua">voda@euro-term.com.ua</a>
+        </div>
+        <div class="msg-acts">
+          <a class="msg-btn msg-tg" href="https://t.me/+380969689103?text=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F%21%20%D0%A6%D1%96%D0%BA%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BE%D0%B4%D0%BE%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0%20/%20%D1%81%D1%96%D0%BB%D1%8C%20PARLA." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg><span>Telegram</span></a>
+          <a class="msg-btn msg-vb" href="viber://chat?number=%2B380969689103"><svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6A8.4 8.4 0 0 1 12.5 3H13a8.5 8.5 0 0 1 8 8z"/></svg><span>Viber</span></a>
+          <a class="msg-btn msg-call" href="tel:+380969689103" aria-label="Подзвонити 096 968 91 03" title="Подзвонити"><svg class="icon" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg></a>
+        </div>
+      </div>
+      </div>
+      <p class="msg-note">Відповідаємо у робочий час: Пн–Пт 09:00–18:00, Сб 09:00–13:00.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ==================== МОДАЛЬНЕ ВІКНО БРЕНДІВ ==================== -->
+<div class="modal-backdrop" id="brand-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bm-title">
+  <div class="modal-box">
+    <button type="button" class="modal-close" id="bm-close" aria-label="Закрити вікно">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <span class="modal-cat" id="bm-cat">Водопідготовка</span>
+    <h3 class="modal-title" id="bm-title">Назва групи</h3>
+    <div id="bm-brands-wrap">
+      <p class="modal-sub">Бренди виробників, які ви можете придбати та замовити з монтажем у нас:</p>
+      <div class="modal-brands" id="bm-list"></div>
+    </div>
+    <div class="modal-call-box">
+      <p><b>Консультація, замовлення солі PARLA та монтаж систем водоочистки:</b></p>
+      <div class="modal-phones" id="bm-phones" style="grid-template-columns: 1fr;">
+        <a class="mp-item mp-highlight" data-dept="water" href="tel:+380969689103"><small>Відділ водоочистки • Іван</small><b>096 968 91 03</b></a>
+      </div>
+      <div class="modal-actions">
+        <a class="btn btn-ghost" style="background:#fff; color:#181a15;" href="viber://chat?number=%2B380969689103">Viber</a>
+        <a class="btn btn-ghost" style="background:transparent; color:#fff; border-color:rgba(255,255,255,0.28);" href="https://t.me/+380969689103" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== ПІДВАЛ САЙТУ ==================== -->
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <a class="brand-logo" href="index.html">
+        <svg viewBox="0 0 120 100" aria-hidden="true">
+          <path d="M90 19 A39 39 0 1 0 90 81" fill="none" stroke="#ffffff" stroke-width="13.5"/>
+          <path d="M90 19 A39 39 0 0 1 90 81" fill="none" stroke="#85C240" stroke-width="13.5"/>
+          <line x1="9" y1="50" x2="62" y2="50" stroke="#ffffff" stroke-width="13.5" stroke-linecap="round"/>
+          <circle cx="64" cy="50" r="11.5" fill="#ffffff"/>
+        </svg>
+        <div class="brand-name">
+          <strong>ЄВРОТЕРМ</strong>
+          <span>Тернопіль</span>
+        </div>
+      </a>
+      <p style="margin-top:14px;max-width:34ch;font-size:0.9rem;">Торгово-монтажна інженерна організація з 1999 року: обладнання для опалення, водопостачання, водоочистки та монтаж під ключ у Тернополі та області.</p>
+    </div>
+
+    <div>
+      <h3>Розділи сайту</h3>
+      <ul>
+        <li><a href="index.html">Головна сторінка</a></li>
+        <li><a href="katalog.html">Каталог сервіс</a></li>
+        <li><a href="montazh.html">Монтаж опалення</a></li>
+        <li><a href="vodoochystka.html">Монтаж водоочистки</a></li>
+        <li><a href="korysna-informatsiya.html">Корисна інформація</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>На цій сторінці</h3>
+      <ul>
+        <li><a href="#analiz-vody">Відправити воду на аналіз</a></li>
+        <li><a href="#diagnostyka-vody">Діагностика проблем води</a></li>
+        <li><a href="#osmos-ekonomiya">Калькулятор економії осмосу</a></li>
+        <li><a href="#dzherelo-vody">Квартира vs Свердловина</a></li>
+        <li><a href="#vvidnyy-vuzol">Правильний ввід води</a></li>
+        <li><a href="#parla-salt">Таблетована сіль PARLA</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Контакти водоочистки</h3>
+      <ul class="ci">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+          <div class="foot-ph"><small>Водоочистка • Іван</small><a href="tel:+380969689103"><b>096 968 91 03</b></a></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <span>вулиця Об'їзна, 19, Великі Гаї, Тернопільська область, 47722</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-main" href="#analiz-vody">Аналіз води</a>
+  <a class="btn btn-main" href="#parla-salt">Сіль PARLA</a>
+  <a class="btn btn-ghost" href="tel:+380969689103" aria-label="Подзвонити Івану у водоочистку">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 2a13 13 0 0 0 6 6l2-2.5 5 2v4a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+  </a>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // 2. ІНТЕРАКТИВНИЙ ДЕТЕКТОР ПРОБЛЕМ ВОДИ
+  const SYMPTOMS_DB = {
+    scale: {
+      label: 'Білий накип',
+      badge: 'Причина: Підвищена жорсткість води',
+      title: 'Солі кальцію та магнію утворюють накип',
+      desc: 'Для Тернополя та області це найпоширеніша проблема. Накип на тенах бойлера та теплообміннику котла збільшує витрату газу й електрики на 15–25% і виводить техніку з ладу. Рішення — колона пом\'якшення води з іонообмінною смолою та таблетованою сіллю PARLA.',
+      steps: ['Фільтр механічної очистки', 'Колона пом\'якшення + сіль PARLA', 'Зворотний осмос (на кухню)']
+    },
+    smell: {
+      label: 'Неприємний запах води',
+      badge: 'Причина: Сірководень або залізобактерії',
+      title: 'Розчинений газ сірководень у воді зі свердловини',
+      desc: 'Неприємний запах («тухлих яєць» чи болота) виникає у глибоких свердловинах без доступу кисню. Окрім дискомфорту, сірководень прискорює корозію труб і теплообмінників. Потрібне каталітичне засипання або аерація + вугільний постфільтр.',
+      steps: ['Фільтр механічної очистки', 'Колона з каталітичним засипанням / аерація', 'Вугільний постфільтр Big Blue']
+    },
+    iron: {
+      label: 'Рудий осад та присмак заліза',
+      badge: 'Причина: Надлишок заліза та марганцю',
+      title: 'Розчинене та окислене залізо у свердловині',
+      desc: 'Вода може виходити прозорою, але на повітрі жовтіє й залишає іржаві потьоки на сантехніці та псує одяг при пранні. Оптимальне рішення — система комплексного очищення (засипання Ecomix), яка одночасно прибирає залізо, марганець і жорсткість.',
+      steps: ['Фільтр механічної очистки', 'Колона комплексної очистки Ecomix + сіль PARLA', 'Вугільний постфільтр']
+    },
+    chlorine: {
+      label: 'Запах хлору',
+      badge: 'Причина: Залишковий хлор у водопроводі',
+      title: 'Хлор та хлорорганічні сполуки з міської мережі',
+      desc: 'Хлор використовується для знезараження міських труб, але пересушує шкіру, подразнює слизові та псує смак напоїв. На весь ввід у квартиру встановлюється магістральна колба Big Blue з брикетованим активованим вугіллям, а на кухню — зворотний осмос.',
+      steps: ['Фільтр механічної очистки', 'Магістральний вугільний фільтр Big Blue', 'Система зворотного осмосу']
+    },
+    sand: {
+      label: 'Пісок або каламутність',
+      badge: 'Причина: Механічні домішки та окалина',
+      title: 'Пісок зі свердловини або окалина зі старих магістралей',
+      desc: 'Тверді частинки дряпають керамічні картриджі дорогих змішувачів і забивають клапани побутової техніки. На вході обов\'язково ставиться сітчастий фільтр механічної очистки та магістральна колба тонкої очистки 5–20 мкм.',
+      steps: ['Сітчастий фільтр механічної очистки (100 мкм)', 'Магістральна колба тонкої очистки (5–20 мкм)']
+    },
+    drink: {
+      label: 'Очистка питної води',
+      badge: 'Завдання: Безпечна питна вода на кухню',
+      title: 'Багатоступенева система зворотного осмосу',
+      desc: 'Мембрана зворотного осмосу затримує до 99,8% усіх домішок, включно з нітратами (які не видаляються кип\'ятінням), важкими металами, бактеріями та солями жорсткості. За бажанням система комплектується мінералізатором.',
+      steps: ['Попередні картриджі', 'Мембрана зворотного осмосу', 'Постфільтр + мінералізатор']
+    }
+  };
+
+  const sympBtns = document.querySelectorAll('#symp-grid .symp-btn');
+  const diagBadge = document.getElementById('diag-badge');
+  const diagTitle = document.getElementById('diag-title');
+  const diagDesc = document.getElementById('diag-desc');
+  const diagChain = document.getElementById('diag-chain');
+  const diagSendBtn = document.getElementById('diag-send-btn');
+
+  let selectedSymps = ['scale'];
+
+  function updateWaterDiag() {
+    if (selectedSymps.length === 0) {
+      selectedSymps = ['scale'];
+      document.querySelector('#symp-grid .symp-btn[data-id="scale"]')?.classList.add('active');
+    }
+
+    if (selectedSymps.length === 1) {
+      const info = SYMPTOMS_DB[selectedSymps[0]];
+      diagBadge.textContent = info.badge;
+      diagTitle.textContent = info.title;
+      diagDesc.textContent = info.desc;
+      diagChain.innerHTML = info.steps
+        .map((st, idx) => `<span class="diag-step-pill">${idx + 1}. ${st}</span>`)
+        .join('<span class="diag-arrow">→</span>');
+    } else {
+      const labels = selectedSymps.map(id => SYMPTOMS_DB[id].label);
+      diagBadge.textContent = `Обрано симптомів: ${selectedSymps.length}`;
+      diagTitle.textContent = `Комплексне рішення: ${labels.join(' + ')}`;
+      diagDesc.textContent = 'Для поєднання кількох проблем оптимально підходить багатоступенева схема: захист від механічних домішок на вході, колона комплексної очистки (яка одночасно прибирає залізо, жорсткість та сірководень) і зворотний осмос для питної води.';
+
+      const combinedSteps = ['Фільтр механічної очистки'];
+      if (selectedSymps.includes('scale') || selectedSymps.includes('iron') || selectedSymps.includes('smell')) {
+        combinedSteps.push('Колона комплексної очистки + сіль PARLA');
+      }
+      if (selectedSymps.includes('chlorine') || selectedSymps.includes('smell')) {
+        combinedSteps.push('Вугільний постфільтр Big Blue');
+      }
+      if (selectedSymps.includes('drink') || combinedSteps.length >= 2) {
+        combinedSteps.push('Зворотний осмос на питну воду');
+      }
+
+      diagChain.innerHTML = combinedSteps
+        .map((st, idx) => `<span class="diag-step-pill">${idx + 1}. ${st}</span>`)
+        .join('<span class="diag-arrow">→</span>');
+    }
+  }
+
+  sympBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.id;
+      if (btn.classList.contains('active') && selectedSymps.length > 1) {
+        btn.classList.remove('active');
+        selectedSymps = selectedSymps.filter(x => x !== id);
+      } else if (!btn.classList.contains('active')) {
+        btn.classList.add('active');
+        selectedSymps.push(id);
+      }
+      updateWaterDiag();
+    });
+  });
+
+  const WATER_PHONE = 'https://t.me/+380969689103?text=';
+  if (diagSendBtn) {
+    diagSendBtn.target = '_blank'; diagSendBtn.rel = 'noopener';
+    diagSendBtn.addEventListener('click', () => {
+      const labels = selectedSymps.map(id => SYMPTOMS_DB[id].label).join(', ');
+      diagSendBtn.href = WATER_PHONE + encodeURIComponent('Доброго дня! Підбір водоочистки за симптомами: ' + labels + '. Потрібна консультація та прорахунок системи.');
+    });
+  }
+
+  // 3. КАЛЬКУЛЯТОР ЕКОНОМІЇ ЗВОРОТНОГО ОСМОСУ
+  const pplBtns = document.querySelectorAll('#osmos-people .ppl-btn');
+  const buyBtns = document.querySelectorAll('#osmos-buy-type .buy-btn');
+  const ocLiters = document.getElementById('oc-liters');
+  const ocSpendBuy = document.getElementById('oc-spend-buy');
+  const ocSpendOsmos = document.getElementById('oc-spend-osmos');
+  const ocSaveYear = document.getElementById('oc-save-year');
+  const ocWeightYear = document.getElementById('oc-weight-year');
+  const ocPayback = document.getElementById('oc-payback');
+  const osmosOrderBtn = document.getElementById('osmos-order-btn');
+
+  let calcPeople = 3;
+  let calcPricePerL = 2.5;
+  let calcBuyMode = 'Водомат / розлив';
+
+  function formatUA(num) {
+    return Math.round(num).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+  }
+
+  function updateOsmosCalc() {
+    const litersMonth = calcPeople * 100;
+    const litersYear = litersMonth * 12;
+
+    const spendBuyMonth = litersMonth * calcPricePerL;
+    const spendBuyYear = litersYear * calcPricePerL;
+
+    const spendOsmosMonth = litersMonth * 0.60;
+    const spendOsmosYear = litersYear * 0.60;
+
+    const saveMonth = spendBuyMonth - spendOsmosMonth;
+    const saveYear = spendBuyYear - spendOsmosYear;
+
+    const avgSystemCost = 6000;
+    const paybackMonths = Math.max(3, Math.round(avgSystemCost / saveMonth));
+
+    ocLiters.textContent = `~${formatUA(litersMonth)} л / міс (${formatUA(litersYear)} л / рік)`;
+    ocSpendBuy.textContent = `~${formatUA(spendBuyMonth)} грн / міс (${formatUA(spendBuyYear)} грн / рік)`;
+    ocSpendOsmos.textContent = `~${formatUA(spendOsmosMonth)} грн / міс (~${formatUA(spendOsmosYear)} грн / рік)`;
+    ocSaveYear.textContent = `+${formatUA(saveYear)} грн / рік`;
+    ocWeightYear.textContent = `${formatUA(litersYear)} кг / рік`;
+    ocPayback.textContent = `~${paybackMonths} міс.`;
+  }
+
+  pplBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      pplBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      calcPeople = parseInt(btn.dataset.ppl, 10) || 3;
+      updateOsmosCalc();
+    });
+  });
+
+  buyBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buyBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      calcPricePerL = parseFloat(btn.dataset.price) || 2.5;
+      calcBuyMode = btn.dataset.mode || 'Водомат / розлив';
+      updateOsmosCalc();
+    });
+  });
+
+  if (osmosOrderBtn) {
+    osmosOrderBtn.target = '_blank'; osmosOrderBtn.rel = 'noopener';
+    osmosOrderBtn.addEventListener('click', () => {
+      osmosOrderBtn.href = WATER_PHONE + encodeURIComponent("Доброго дня! Цікавить система зворотного осмосу для сім'ї (" + calcPeople + " осіб, зараз купуємо воду: " + calcBuyMode + "). Підкажіть моделі та вартість монтажу.");
+    });
+  }
+
+  updateOsmosCalc();
+
+  // 4. ПЕРЕМИКАЧ "КВАРТИРА (МІСЬКА ВОДА) VS БУДИНОК (СВЕРДЛОВИНА)"
+  const srcTabs = document.querySelectorAll('.source-tab');
+  const panelCity = document.getElementById('panel-src-city');
+  const panelWell = document.getElementById('panel-src-well');
+
+  srcTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      srcTabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+
+      if (tab.dataset.src === 'city') {
+        panelCity.hidden = false;
+        panelWell.hidden = true;
+      } else {
+        panelCity.hidden = true;
+        panelWell.hidden = false;
+      }
+    });
+  });
+
+  // 5. ІНТЕРАКТИВНИЙ ВВІДНИЙ ВУЗОЛ (СИНХРОНІЗАЦІЯ ФОТО-ТОЧОК ТА СПИСКУ 1 -> 9)
+  const pins = document.querySelectorAll('.node-pin');
+  const stepItems = document.querySelectorAll('.node-step-item');
+
+  function activateNodeStep(stepNum) {
+    pins.forEach(p => p.classList.toggle('active', p.dataset.step === stepNum));
+    stepItems.forEach(item => item.classList.toggle('active', item.dataset.step === stepNum));
+  }
+
+  pins.forEach(pin => {
+    pin.addEventListener('click', () => {
+      const num = pin.dataset.step;
+      activateNodeStep(num);
+      const targetItem = document.querySelector(`.node-step-item[data-step="${num}"]`);
+      if (targetItem && window.innerWidth <= 960) {
+        targetItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+  });
+
+  stepItems.forEach(item => {
+    item.addEventListener('click', () => {
+      activateNodeStep(item.dataset.step);
+    });
+  });
+});
+</script>
+</body>
+</html>
